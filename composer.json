@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "rapidez/confira",
+    "description": "This is my package confira",
     "keywords": [
         "rapidez",
-        ":package_slug"
+        "confira"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://rapidez.io",
     "license": "GPL-3.0",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Roene",
+            "email": "roene@justbetter.nl",
             "role": "Developer"
         }
     ],
@@ -18,11 +18,11 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.0|^8.1",
-        "rapidez/core": "*"
+        "rapidez/checkout-theme": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Rapidez\\Confira\\": "src"
         }
     },
     "config": {
@@ -31,7 +31,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Rapidez\\Confira\\ConfiraServiceProvider"
             ]
         }
     }
