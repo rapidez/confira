@@ -1,6 +1,6 @@
 # Rapidez confira
 
-Work in progress
+This package extends `rapidez/checkout-theme` with some parts styled differently.
 
 ## Installation
 
