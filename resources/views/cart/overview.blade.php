@@ -7,7 +7,7 @@
 @section('content')
     <cart v-cloak>
         <div v-if="hasItems" class="container" slot-scope="{ cart, hasItems, changeQty, remove }">
-            <x-rapidez-ct::title class="mb-5 text-ct-primary">
+            <x-rapidez-ct::title class="mb-5 text-ct-neutral">
                 @lang('Cart')
             </x-rapidez-ct::title>
             <x-rapidez-ct::layout class="[&>div:first-child>div>table]:my-0">
