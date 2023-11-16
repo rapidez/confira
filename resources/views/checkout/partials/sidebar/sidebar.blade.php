@@ -13,3 +13,4 @@
 @include('rapidez-ct::cart.partials.sidebar.payment')
 @include('rapidez-ct::cart.partials.sidebar.usps')
 @include('rapidez-ct::checkout.partials.sidebar.user-info')
+@include('rapidez-ct::checkout.partials.sidebar.bottom-links')
