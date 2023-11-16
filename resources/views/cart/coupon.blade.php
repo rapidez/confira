@@ -2,9 +2,9 @@
     <div slot-scope="{ isOpen, toggle }">
         <coupon v-show="isOpen" v-slot="{ cart, removeCoupon, couponCode, inputEvents, applyCoupon, submitError }">
             <form class="text-sm" @submit.prevent="applyCoupon">
-                <div class="flex w-full flex-row gap-x-3">
+                <div class="flex w-full gap-x-3 gap-y-5 max-sm:flex-col">
                     <x-rapidez-ct::input
-                        class="w-60"
+                        class="w-60 max-sm:w-full"
                         name="couponCode"
                         label="Apply discount code"
                         :placeholder="__('Enter code') . '...'"
