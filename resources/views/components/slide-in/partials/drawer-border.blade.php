@@ -1,0 +1,1 @@
+<div {{ $attributes->class('absolute mx-auto h-1.5 w-14 rounded-full') }}></div>
