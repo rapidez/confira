@@ -7,7 +7,7 @@
 </x-rapidez-ct::sections>
 
 <x-rapidez-ct::toolbar>
-    <x-rapidez-ct::button.outline v-on:click.prevent="goToStep(1)" class="flex justify-center items-center !p-0 w-[50px] h-[50px] max-md:hidden">
+    <x-rapidez-ct::button.outline v-on:click.prevent="goToStep(1)" class="flex justify-center items-center !p-0 w-12 h-12 max-md:hidden">
         <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
     </x-rapidez-ct::button.outline>
     <x-rapidez-ct::button.enhanced
