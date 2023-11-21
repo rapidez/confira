@@ -6,10 +6,10 @@
 
 @section('content')
     <cart v-cloak>
-        <div v-if="hasItems" class="container" slot-scope="{ cart, hasItems, changeQty, remove }">
-            <x-rapidez-ct::title class="mb-5 text-ct-neutral">
+        <div v-if="hasItems" class="container mt-4" slot-scope="{ cart, hasItems, changeQty, remove }">
+            <x-rapidez-ct::title.2xl class="mb-5 text-ct-neutral">
                 @lang('Cart')
-            </x-rapidez-ct::title>
+            </x-rapidez-ct::title.2xl>
             <x-rapidez-ct::layout class="[&>div:first-child>div>table]:my-0">
                 @include('rapidez-ct::cart.cart')
                 <x-slot:sidebar>
