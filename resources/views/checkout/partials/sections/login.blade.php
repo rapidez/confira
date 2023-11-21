@@ -36,10 +36,10 @@
                 </x-rapidez-ct::button.accent>
             </template>
             <template v-else>
-                <div class="bg-ct-disabled flex h-[52px] items-center rounded border px-4">
-                    <x-heroicon-o-user-circle class="mr-[10px] h-[24px]" />
+                <div class="bg-ct-disabled flex h-14 shadow items-center rounded-md border px-4">
+                    <x-heroicon-o-user-circle class="mr-2.5 h-6" />
                     <span v-text="$root.user?.email"></span>
-                    <x-heroicon-o-lock-closed class="ml-auto h-[24px] text-ct-primary" />
+                    <x-heroicon-o-lock-closed class="ml-auto h-6 text-ct-neutral" />
                 </div>
                 <div>
                     <x-rapidez-ct::title.sm>@lang('Welcome back') @{{ $root.user?.firstname }}!</x-rapidez-ct::title.sm>

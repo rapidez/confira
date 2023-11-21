@@ -8,7 +8,7 @@
     </span>
     @foreach (array_slice($steps, 0, -1) as $stepTitle)
         <div
-            class="aspect-square w-3 rounded-[4px]"
+            class="aspect-square w-3 rounded"
             v-on:click="goToStep({{ $stepTitle == 'Credentials' ? 3 : $loop->index }})"
             :class="{
                 'bg-ct-primary cursor-pointer': {{ $loop->index + 1 }} <= checkout.step,
