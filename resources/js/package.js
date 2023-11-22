@@ -1,1 +1,1 @@
-Vue.component('slide-in', () => import('./components/slideIn.vue'));
+Vue.component('slide-in', () => import('./components/SlideIn.vue'));
