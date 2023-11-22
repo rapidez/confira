@@ -12,11 +12,7 @@
                         {{ $slot }}
                     @endisset
                 </div>
-                <label
-                    for="slide-in"
-                    class="absolute z-20 inset-0 bg-ct-neutral/30 transition-all duration-500 opacity-0 pointer-events-none peer-checked:pointer-events-auto peer-checked:opacity-100"
-                    >
-                </label>
+                <label for="slide-in" class="absolute z-20 inset-0 bg-ct-neutral/30 transition-all duration-500 opacity-0 pointer-events-none peer-checked:pointer-events-auto peer-checked:opacity-100"></label>
             </div>
     </template>
 </slide-in>
