@@ -1,5 +1,4 @@
 <x-rapidez-ct::slide-in>
-    <div class="absolute top-0 inset-x-0 h-1.5 bg-ct-primary"></div>
     <label
         for="slide-in"
         class="absolute z-10 w-7 h-7 right-3 top-5 peer-checked:text-ct-primary"

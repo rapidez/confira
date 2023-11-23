@@ -22,11 +22,11 @@
                 target: null,
                 container: null,
                 left: '0',
-                top: '0',
+                top: '',
                 isSwiping: false,
                 distanceX: 0,
                 distanceY: 0,
-                checked: false,
+                isOpen: false,
             }
         },
 
@@ -55,17 +55,17 @@
                         }
                         this.top = `${distance}px`
                     } else {
-                        this.top = '0'
+                        this.top = ''
                     }
                 }
             },
 
             onSwipeEnd() {
-                this.top = '0'
+                this.top = ''
                 if (this.distanceY > 0 && this.targetHeight && Math.abs(this.distanceY) / this.targetHeight >= this.threshold) {
-                    this.checked = false
+                    this.isOpen = false
                 } else {
-                    this.checked = true
+                    this.isOpen = true
                 }
             }
         },
