@@ -20,7 +20,6 @@
         data() {
             return {
                 target: null,
-                container: null,
                 left: '0',
                 top: '',
                 isSwiping: false,
@@ -33,9 +32,8 @@
         mounted() {
             const refs = this.$scopedSlots.default()[0].context.$refs
             this.target = refs.target // Add a reference to the target element
-            this.container = refs.container // Add a reference to the container element
 
-            const { distanceX, distanceY, isSwiping } = usePointerSwipe(this.container, {
+            const { distanceX, distanceY, isSwiping } = usePointerSwipe(this.target, {
                 onSwipe: this.onSwipe,
                 onSwipeEnd: this.onSwipeEnd
             })
@@ -71,10 +69,6 @@
         },
 
         computed: {
-            containerWidth() {
-                return this.container.offsetWidth
-            },
-
             targetHeight() {
                 return this.target.offsetHeight
             }
