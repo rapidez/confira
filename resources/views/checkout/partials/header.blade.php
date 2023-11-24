@@ -14,8 +14,11 @@
             </div>
         </div>
     </a>
-    <x-rapidez-ct::button.inactive for="" class="md:hidden">
+    <x-rapidez-ct::button.inactive for="slide-in" class="md:hidden">
         <span class="relative">
+            <span class="absolute flex items-center justify-center w-4 h-4 -right-2 -top-1.5 rounded-full bg-ct-primary text-white text-xs">
+                @{{ Math.round(cart.items_qty) }}
+            </span>
             <x-heroicon-o-shopping-cart class="w-6 h-6"/>
         </span>
         @lang('My order')
