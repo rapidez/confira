@@ -24,7 +24,7 @@
     </div>
     <div v-if="cart.shipping_method">
         <dt>@lang('Shipping')</dt>
-        <dd v-if="cart.shipping_amount_excl_tax > 0 " class="font-medium">
+        <dd v-if="cart.shipping_amount_excl_tax > 0 " class="font-medium text-ct-neutral">
             @{{ cart.shipping_amount_excl_tax | price }}
         </dd>
         <dd v-else class="font-medium text-ct-neutral">

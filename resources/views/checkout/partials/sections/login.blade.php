@@ -1,6 +1,6 @@
 <login v-slot="{ email, password, go, loginInputChange, emailAvailable, logout }">
     <x-rapidez-ct::card.inactive>
-        <div class="grid gap-4 sm:gap-5 md:grid-cols-2">
+        <div class="grid gap-4 sm:gap-5 md:grid-cols-2 md:items-end">
             <template v-if="!loggedIn">
                 <x-rapidez-ct::input
                     name="email"
@@ -36,14 +36,14 @@
                 </x-rapidez-ct::button.accent>
             </template>
             <template v-else>
-                <div class="bg-ct-disabled flex h-14 shadow items-center rounded-md border px-4">
+                <div class="bg-ct-disabled flex h-14 shadow-gray items-center rounded-md border px-4">
                     <x-heroicon-o-user-circle class="mr-2.5 h-6" />
                     <span v-text="$root.user?.email"></span>
                     <x-heroicon-o-lock-closed class="ml-auto h-6 text-ct-neutral" />
                 </div>
                 <div>
-                    <x-rapidez-ct::title.sm>@lang('Welcome back') @{{ $root.user?.firstname }}!</x-rapidez-ct::title.sm>
-                    <span>
+                    <p class="text-base font-medium text-ct-neutral">@lang('Welcome back') @{{ $root.user?.firstname }}!</p>
+                    <span class="text-inactive text-sm">
                         @lang('Is this not your account?')
                         <button class="underline" v-on:click.prevent="logout('/login')">@lang('Log out')</button>
                         @lang('and use a different e-mail address.')
