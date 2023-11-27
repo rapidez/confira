@@ -36,7 +36,7 @@
                 </x-rapidez-ct::button.accent>
             </template>
             <template v-else>
-                <div class="bg-ct-disabled flex h-14 shadow-gray items-center rounded-md border px-4">
+                <div class="bg-ct-disabled flex h-14 shadow items-center rounded-md border px-4">
                     <x-heroicon-o-user-circle class="mr-2.5 h-6" />
                     <span v-text="$root.user?.email"></span>
                     <x-heroicon-o-lock-closed class="ml-auto h-6 text-ct-neutral" />
