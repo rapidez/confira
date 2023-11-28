@@ -10,7 +10,7 @@
             <x-rapidez-ct::title.2xl class="mb-5 text-ct-neutral">
                 @lang('Cart')
             </x-rapidez-ct::title.2xl>
-            <x-rapidez-ct::layout class="[&>div:first-child>div>table]:my-0">
+            <x-rapidez-ct::layout>
                 @include('rapidez-ct::cart.cart')
                 <x-slot:sidebar>
                     @include('rapidez-ct::cart.partials.sidebar.sidebar')
