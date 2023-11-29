@@ -18,6 +18,8 @@
             </div>
             <div class="text-right text-sm font-medium">
                 <img
+                    width="32"
+                    height="32"
                     class="max-h-8"
                     v-bind:alt="method.carrier_title"
                     v-bind:src="`/vendor/shipping-icons/${method.carrier_title}.svg`"
