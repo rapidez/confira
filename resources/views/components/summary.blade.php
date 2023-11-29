@@ -1,5 +1,5 @@
 <x-rapidez-ct::separated-listing tag="dl">
-    <toggler>
+    <toggler open>
         <div class="flex flex-col" slot-scope="{ isOpen, toggle }" >
             <div @click="toggle" class="flex w-full justify-between">
                 <dt class="flex gap-x-1">
