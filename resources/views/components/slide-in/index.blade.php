@@ -4,7 +4,7 @@
             <input v-if="_self" v-model="_self.isOpen" id="slide-in" type="checkbox" class="relative z-50 opacity-0 h-0 peer" />
             <div
                 ref="target"
-                class="absolute top-1.5 inset-x-0 bg-ct-primary-100 z-30 rounded-b-xl px-5 pt-6 pb-12 overflow-y-auto scrollbar-hide opacity-0 -translate-y-full peer-checked:opacity-100 peer-checked:translate-y-0"
+                class="!touch-none absolute top-1.5 inset-x-0 bg-ct-primary-100 z-30 rounded-b-xl px-5 pt-6 pb-12 overflow-y-auto scrollbar-hide opacity-0 -translate-y-full peer-checked:opacity-100 peer-checked:translate-y-0"
                 :class="{ 'transition-all duration-500': !isSwiping }"
                 :style="{ top }"
             >

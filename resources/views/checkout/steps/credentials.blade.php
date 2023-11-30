@@ -9,7 +9,6 @@
         @include('rapidez-ct::checkout.partials.sections.shipping')
     </x-rapidez-ct::sections>
 </form>
-
 <x-rapidez-ct::toolbar>
     <x-rapidez-ct::button.outline :href="route('cart')" class="flex justify-center items-center !p-0 w-12 h-12 max-md:hidden">
         <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
