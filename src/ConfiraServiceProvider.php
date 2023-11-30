@@ -12,7 +12,7 @@ class ConfiraServiceProvider extends ServiceProvider
         // the checkout theme so we need to register them earlier.
         $this->bootViews();
 
-        $this->mergeConfigFrom(__DIR__.'/../config/rapidez-confira.php', 'rapidez-confira');
+        $this->mergeConfigFrom(__DIR__.'/../config/rapidez/confira.php', 'rapidez.confira');
     }
 
     public function boot()
@@ -34,7 +34,7 @@ class ConfiraServiceProvider extends ServiceProvider
         ], 'views');
 
         $this->publishes([
-            __DIR__.'/../config/rapidez-confira.php' => config_path('rapidez-confira.php'),
+            __DIR__.'/../config/rapidez/confira.php' => config_path('rapidez/confira.php'),
         ], 'rapidez-confira-config');
 
         return $this;
