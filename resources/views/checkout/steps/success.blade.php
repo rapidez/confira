@@ -1,6 +1,6 @@
 <checkout-success>
-    <div slot-scope="{ order }" dusk="checkout-success" class="text-ct-neutral flex flex-wrap gap-x-20 text-sm max-md:flex-col lg:mt-4 lg:gap-x-28">
-        <div class="flex-1">
+    <div slot-scope="{ order }" dusk="checkout-success" class="mt-4">
+        <x-rapidez-ct::layout>
             <x-rapidez-ct::title-progress-bar>
                 @lang('Thank you for your order')
             </x-rapidez-ct::title-progress-bar>
@@ -14,16 +14,16 @@
                     'rapidez-ct::checkout.partials.sections.success.create-account'
                 )
             </x-rapidez-ct::sections>
-        </div>
 
-        <x-rapidez-ct::layout.sidebar>
-            <x-rapidez-ct::title class="uppercase mb-4">
-                @lang('Overview')
-            </x-rapidez-ct::title>
-            @include('rapidez-ct::checkout.partials.sections.success.summary')
-            @include('rapidez-ct::cart.partials.sidebar.payment')
-            @include('rapidez-ct::cart.partials.sidebar.usps')
-            @include('rapidez-ct::checkout.partials.sections.success.order-info')
-        </x-rapidez-ct::layout.sidebar>
+            <x-slot:sidebar>
+                <x-rapidez-ct::title class="uppercase mb-4">
+                    @lang('Overview')
+                </x-rapidez-ct::title>
+                @include('rapidez-ct::checkout.partials.sections.success.summary')
+                @include('rapidez-ct::cart.partials.sidebar.payment')
+                @include('rapidez-ct::cart.partials.sidebar.usps')
+                @include('rapidez-ct::checkout.partials.sections.success.order-info')
+            </x-slot:sidebar>
+        </x-rapidez-ct::layout>
     </div>
 </checkout-success>
