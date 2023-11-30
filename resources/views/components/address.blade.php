@@ -9,8 +9,8 @@
     <div v-if="!isEmpty" {{ $attributes->whereDoesntStartWith('v-')->class('flex flex-col') }}>
         @if ($check)
             <template v-if="{{ $check }}">
-                <div class="bg-ct-accent absolute inset-y-0 left-0 w-1 rounded-l"></div>
-                <x-heroicon-s-check class="text-ct-accent absolute right-7 top-7 w-5" />
+                <div class="bg-ct-primary absolute inset-y-0 left-0 w-1 rounded-l-xl"></div>
+                <x-heroicon-s-check class="text-ct-primary absolute right-5 top-7 w-5" />
             </template>
         @endif
         <p class="text-base font-medium mb-4 pr-8">
@@ -29,7 +29,8 @@
                 <li v-if="name">@{{ name }}</li>
                 <li v-if="street">@{{ street }}</li>
                 <li v-if="city">@{{ city }}</li>
-                <li v-if="country">@{{ country }}</li>
+                <li v-if="country === 'NL'">@lang('The Netherlands')</li>
+                <li v-if="country !== 'NL'">@{{ country }}</li>
             </ul>
             @if (!empty($slot))
                 <div class="mt-auto flex flex-col self-end">

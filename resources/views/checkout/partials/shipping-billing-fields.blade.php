@@ -1,4 +1,4 @@
-<p class="mb-5 text-base text-ct-inactive font-medium">
+<p class="flex flex-wrap gap-3 justify-between items-center mb-5 text-base text-ct-inactive font-medium">
     @if ($type == 'shipping')
         @lang('Shipping address')
     @else

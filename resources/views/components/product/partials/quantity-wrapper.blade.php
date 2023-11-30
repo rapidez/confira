@@ -6,11 +6,6 @@
         <x-rapidez-ct::input.quantity />
     </div>
     <div class="flex flex-col w-20 pl-2 ml-auto">
-        <div class="text-right" :class="{ 'line-through text-xs text-ct-inactive font-normal': item.specialPrice }">
-            @{{ item.total | price }}
-        </div>
-        <div class="text-right" v-if="item.specialPrice">
-            @{{ item.specialPrice | price }}
-        </div>
+        @include('rapidez-ct::components.product.partials.price')
     </div>
 </div>
