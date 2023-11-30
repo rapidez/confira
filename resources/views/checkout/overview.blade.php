@@ -29,9 +29,7 @@
                 </template>
 
                 <template v-if="checkout.step == 4">
-                    <x-rapidez-ct::layout>
-                        @include('rapidez-ct::checkout.steps.success')
-                    </x-rapidez-ct::layout>
+                    @include('rapidez-ct::checkout.steps.success')
                 </template>
             </div>
         </div>

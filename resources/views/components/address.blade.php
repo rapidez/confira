@@ -13,7 +13,7 @@
                 <x-heroicon-s-check class="text-ct-accent absolute right-7 top-7 w-5" />
             </template>
         @endif
-        <p class="text-base font-medium mb-4 pr-8">
+        <p class="text-base font-medium mb-2.5 pr-8">
             @if($customTitle)
                 @lang($customTitle)
             @else

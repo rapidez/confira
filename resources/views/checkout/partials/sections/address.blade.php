@@ -1,8 +1,8 @@
 <checkout-address v-slot="{ useCards, editing, toggleEdit, isType, select }">
     <x-rapidez-ct::card.inactive v-if="useCards && !editing">
         @include('rapidez-ct::checkout.partials.address-cards')
-        <div class="mt-5">
-            <x-rapidez-ct::button.accent v-on:click.prevent="toggleEdit">
+        <div class="flex flex-wrap items-center gap-3 mt-5">
+            <x-rapidez-ct::button.inactive v-on:click.prevent="toggleEdit">
                 @lang('Use a new address')
             </x-rapidez-ct::button.accent>
             <x-rapidez-ct::button.outline tag="label" for="popup" class="cursor-pointer" v-if="$root.user.addresses.length">
