@@ -4,7 +4,7 @@
         <span class="overflow-hidden rounded-xl -z-10 absolute inset-0 bg-ct-inactive-100 peer-checked:border-y peer-checked:border-r peer-checked:bg-white peer-checked:shadow before:absolute before:-inset-y-px before:w-1 before:rounded-l before:bg-ct-primary before:opacity-0 before:transition-all before:peer-checked:opacity-100"></span>
     </span>
     @isset($slot)
-        <span class="flex w-full flex-wrap items-center justify-between gap-x-3">
+        <span class="flex w-full items-center justify-between gap-x-3">
             {{ $slot }}
         </span>
     @endisset

@@ -7,13 +7,13 @@
         <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
     </x-rapidez-ct::button.outline>
 
-    <a href="{{ url('/') }}" class="max-md:mx-5 flex items-center md:items-start md:flex-none max-md:flex-1 md:pt-4">
-        <div class="sticky flex top-4 md:w-24 [&>*]:w-auto [&>*]:h-auto max-md:flex-1 max-md:h-12">
+    <div class="flex md:w-24 [&>*]:w-auto [&>*]:h-auto max-md:flex-1 max-md:h-12">
+        <a href="{{ url('/') }}" class="sticky top-0 max-md:mx-5 flex items-center md:self-start max-md:flex-1 md:pt-4">
             <div class="w-inherit flex-1">
                 <x-rapidez-ct::logo />
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
     <x-rapidez-ct::button.inactive for="slide-in" class="md:hidden">
         <span class="relative">
             <span class="absolute flex items-center justify-center w-4 h-4 -right-2 -top-1.5 rounded-full bg-ct-primary text-white text-xs">

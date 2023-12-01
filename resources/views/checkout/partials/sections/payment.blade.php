@@ -2,14 +2,13 @@
     <form id="payment" class="flex flex-col gap-4" v-on:submit.prevent="save(['payment_method'], 4)">
         <div v-for="(method, index) in checkout.payment_methods">
             <x-rapidez-ct::input.radio
-                class="min-h-[40px]"
                 name="payment_method"
                 v-bind:value="method.code"
                 v-bind:dusk="'method-'+index"
                 v-model="checkout.payment_method"
                 required
             >
-                <div class="text-ct-neutral font-medium max-sm:max-w-[180px]">@{{ method.title }}</div>
+                <div class="text-ct-neutral font-medium">@{{ method.title }}</div>
                 <img
                     class="max-h-6"
                     v-bind:alt="method.code"
