@@ -8,7 +8,7 @@
                     @{{ item.name }}
                 </div>
             </dt>
-            <dd class="font-medium text-neutral">@{{ item.base_price_incl_tax | price }}</dd>
+            <dd class="font-medium text-ct-neutral">@{{ item.base_price_incl_tax | price }}</dd>
         </div>
     </div>
 </div>
@@ -29,7 +29,7 @@
             </dd>
         </div>
         <div v-if="segment.code === 'subtotal'" class="flex items-center order-last justify-between border-t border-dashed pt-3 mt-4">
-            <dt class="text-base text-neutral font-medium">@lang('Total price')</dt>
+            <dt class="text-base text-ct-neutral font-medium">@lang('Total price')</dt>
             <dd class="font-bold text-xl text-ct-neutral">@{{ segment.value | price }}</dd>
         </div>
     </template>

@@ -13,7 +13,7 @@
                 <x-rapidez::no-image v-else class="h-24 w-24"/>
             </div>
             <div class="flex w-36 flex-1 flex-col items-start">
-                <a :href="item.url" class="text-neutral text-base font-medium" dusk="cart-item-name">@{{ item.name }}</a>
+                <a :href="item.url" class="text-ct-neutral text-base font-medium" dusk="cart-item-name">@{{ item.name }}</a>
                 <div class="text-sm text-inactive" v-for="(optionValue, option) in item.options">
                     @{{ option }}: @{{ optionValue }}
                 </div>
