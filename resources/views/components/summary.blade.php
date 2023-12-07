@@ -6,7 +6,7 @@
                     <span>@lang('Total products') (@{{ Math.round(cart.items_qty) }})</span>
                     <x-heroicon-o-chevron-down class="text-inactive w-3 stroke-2 transition-all" ::class="{ 'rotate-180': isOpen }" />
                 </dt>
-                <dd class="font-medium text-neutral">@{{ cart.subtotal | price }}</dd>
+                <dd class="font-medium text-ct-neutral">@{{ cart.subtotal | price }}</dd>
             </div>
             <div v-show="isOpen" v-for="item in cart.items" class="text-ct-inactive">
                 <span class="text-ct-neutral">@{{ item.qty }}x</span>
@@ -32,7 +32,7 @@
         </dd>
     </div>
     <div class="border-t border-dashed mt-2">
-        <dt class="text-base text-neutral font-medium">@lang('Total price')</dt>
+        <dt class="text-base text-ct-neutral font-medium">@lang('Total price')</dt>
         <dd class="font-bold text-xl text-ct-neutral">@{{ cart.total | price }}</dd>
     </div>
 </x-rapidez-ct::separated-listing>
