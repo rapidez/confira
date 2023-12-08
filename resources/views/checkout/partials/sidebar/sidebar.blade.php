@@ -6,7 +6,7 @@
 
 @include('rapidez-ct::cart.partials.sidebar.payment')
 @include('rapidez-ct::cart.partials.sidebar.usps')
-<div class="flex flex-wrap gap-x-5 justify-between border-y border-dashed mt-5 py-5">
+<div class="flex flex-wrap justify-between border-y border-dashed mt-5 py-5">
     @include('rapidez-ct::checkout.partials.sidebar.user-info')
 </div>
 @include('rapidez-ct::checkout.partials.sidebar.bottom-links')
