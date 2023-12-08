@@ -26,8 +26,8 @@
     </li>
     <li v-if="cart.shipping_method">
         <div>@lang('Shipping')</div>
-        <div v-if="cart.shipping_amount_excl_tax > 0 " class="font-medium text-ct-neutral">
-            @{{ cart.shipping_amount_excl_tax | price }}
+        <div v-if="cart.shipping_amount > 0 " class="font-medium text-ct-neutral">
+            @{{ cart.shipping_amount | price }}
         </div>
         <div v-else class="font-medium text-ct-neutral">
             @lang('Free')
