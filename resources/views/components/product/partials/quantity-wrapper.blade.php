@@ -1,6 +1,6 @@
 <div {{ $attributes->class('flex items-center font-medium') }}>
     <div class="flex items-center justify-end gap-x-7">
-        <button v-on:click="remove(item)" class="text-ct-inactive mt-1 text-xs hover:underline" :dusk="'item-delete-' + index" :alt="{{ __('Remove') }}">
+        <button v-on:click="remove(item)" class="text-ct-inactive mt-1 text-xs hover:underline" :dusk="'item-delete-' + index" title="{{ __('Remove') }}">
             <x-heroicon-o-trash class="text-inactive w-5"/>
         </button>
         <x-rapidez-ct::input.quantity />
