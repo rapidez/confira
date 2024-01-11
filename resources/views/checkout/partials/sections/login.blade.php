@@ -31,9 +31,9 @@
                     @lang('We will send your order confirmation to this e-mail address. We will also check if you already have an account so you can checkout more efficiently.')
                 </p>
 
-                <x-rapidez-ct::button.accent v-if="!emailAvailable" v-on:click.prevent="go" dusk="continue">
+                <x-rapidez-ct::button.primary v-if="!emailAvailable" v-on:click.prevent="go" dusk="continue">
                     @lang('Login')
-                </x-rapidez-ct::button.accent>
+                </x-rapidez-ct::button.primary>
             </template>
             <template v-else>
                 <div class="bg-ct-disabled flex h-14 shadow items-center rounded-md border px-4">
