@@ -1,5 +1,6 @@
 <x-rapidez-ct::input.radio
     name="payment_method"
+    class="!py-7"
     v-bind:value="method.code"
     v-bind:dusk="'method-'+index"
     v-model="checkout.payment_method"
