@@ -7,7 +7,7 @@
                         <span>@lang('Total products') (@{{ Math.round(cart.total_quantity) }})</span>
                         <x-heroicon-o-chevron-down class="text-inactive w-3 stroke-2 transition-all" ::class="{ 'rotate-180': isOpen }" />
                     </div>
-                    <div class="font-medium text-ct-neutral">@{{ cart.prices.subtotal.subtotal_including_tax.value | price }}</div>
+                    <div class="font-medium text-ct-neutral">@{{ cart.prices.subtotal_including_tax.value | price }}</div>
                 </div>
                 <div v-show="isOpen" v-for="item in cart.items" class="text-ct-inactive">
                     <span class="text-ct-neutral">@{{ item.quantity }}x</span>
