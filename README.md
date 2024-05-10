@@ -8,6 +8,32 @@ This package extends `rapidez/checkout-theme` with some parts styled differently
 composer require rapidez/confira
 ```
 
+Confira adds the `ct-primary-100` color, which should be added to your tailwind config alongside the other checkout-theme colors like so:
+
+```diff
+colors: {
+    ct: {
+        enhanced: {
+            DEFAULT: '#40C42A',
+        },
+        inactive: {
+            DEFAULT: '#8A8275',
+            100: '#F6F4EE',
+        },
+        disabled: '#EBE8DE',
+        primary: {
+            DEFAULT: '#FEAB05',
++           100: '#FEE8C3'
+        },
+        neutral: {
+            DEFAULT: '#625B50',
+        },
+        border: '#EAE7DC',
+        error: '#DF241D',
+    },
+},
+```
+
 ## Configuration
 
 You can publish the config with:
