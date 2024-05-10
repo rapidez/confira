@@ -4,7 +4,7 @@
             @include('rapidez-ct::checkout.partials.header')
         </x-slot:header>
 
-        <template v-if="checkout.step == 2 && hasItems">
+        <template v-if="checkout.step == 2 && $root.cart?.total_quantity">
             @include('rapidez-ct::checkout.steps.credentials')
         </template>
 
