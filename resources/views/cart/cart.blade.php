@@ -6,6 +6,4 @@
     <x-rapidez-ct::button.outline href="/">
         @lang('Continue shopping')
     </x-rapidez-ct::button.outline>
-
-    @include('rapidez-ct::cart.coupon')
 </x-rapidez-ct::toolbar>
