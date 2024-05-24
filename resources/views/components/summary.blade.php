@@ -33,8 +33,8 @@
             @lang('Free')
         </div>
     </li>
-    <li class="border-t border-dashed mt-2">
-        <div class="text-base text-ct-neutral font-medium">@lang('Total price')</div>
-        <div class="font-bold text-xl text-ct-neutral">@{{ cart.prices.grand_total.value | price }}</div>
+    <li class="border-t border-dashed mt-2.5">
+        <div class="text-base text-ct-neutral font-semibold">@lang('Total price')</div>
+        <div class="font-bold text-lg text-ct-neutral">@{{ cart.prices.grand_total.value | price }}</div>
     </li>
 </x-rapidez-ct::separated-listing>

@@ -1,6 +1,6 @@
-<x-rapidez-ct::title class="uppercase max-md:hidden">
+<x-rapidez-ct::title.xl class="max-md:hidden">
     @lang('Overview')
-</x-rapidez-ct::title>
+</x-rapidez-ct::title.xl>
 
 <x-rapidez-ct::summary />
 

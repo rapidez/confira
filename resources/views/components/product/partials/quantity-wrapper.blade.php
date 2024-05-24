@@ -3,7 +3,7 @@
         @include('rapidez-ct::cart.partials.product.remove-button')
         <x-rapidez-ct::input.quantity />
     </div>
-    <div class="flex flex-col w-20 pl-2 ml-auto">
+    <div class="flex flex-col w-24 pl-2 ml-auto">
         @include('rapidez-ct::components.product.partials.price')
     </div>
 </div>
