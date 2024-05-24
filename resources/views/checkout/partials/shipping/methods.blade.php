@@ -1,4 +1,4 @@
-<div v-for="(method, index) in checkout.shipping_methods" class="mt-5 flex flex-col gap-2">
+<div v-for="(method, index) in checkout.shipping_methods" class="mt-4 flex flex-col gap-2">
     <x-rapidez-ct::input.radio
         v-bind:value="method.carrier_code+'_'+method.method_code"
         v-bind:dusk="'method-'+index"
@@ -7,7 +7,7 @@
         class="!py-4"
         required
     >
-        <div class="flex flex-col sm:w-3/5">
+        <div class="flex flex-col md:w-3/5">
             <span class="text-ct-neutral font-medium text-base">@{{ method.carrier_title }}</span>
             <span class="text-ct-inactive text-sm">@{{ method.method_title }}</span>
         </div>

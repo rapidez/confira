@@ -8,10 +8,10 @@
     :error-callback="checkResponseForExpiredCart"
     v-slot="{ mutate, variables }"
 >
-    <form v-on:submit.prevent="mutate" class="flex w-full gap-x-3 gap-y-5 max-sm:flex-col items-center">
+    <form v-on:submit.prevent="mutate" class="flex w-full gap-x-3 gap-y-5 max-md:flex-col items-center">
         <x-rapidez-ct::input
             :label="__('Enter code')"
-            class="flex-1 max-sm:w-full"
+            class="flex-1 max-md:w-full"
             name="couponCode"
             :placeholder="__('Enter code') . '...'"
             v-model="variables.coupon_code"
