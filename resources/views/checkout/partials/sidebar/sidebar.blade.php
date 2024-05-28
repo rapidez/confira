@@ -1,6 +1,6 @@
-<x-rapidez-ct::title class="uppercase mb-4">
+<x-rapidez-ct::title.xl class="mb-4">
     @lang('Overview')
-</x-rapidez-ct::title>
+</x-rapidez-ct::title.xl>
 
 <x-rapidez-ct::summary />
 

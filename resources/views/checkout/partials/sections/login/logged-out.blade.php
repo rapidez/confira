@@ -1,7 +1,7 @@
 <x-rapidez-ct::input
     name="email"
     type="email"
-    label="Email"
+    :label="__('Email')"
     v-bind:value="email"
     v-on:input="loginInputChange"
     v-on:blur="$root.guestEmail = email; if(!password) { go() }"

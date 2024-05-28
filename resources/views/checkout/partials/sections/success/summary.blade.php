@@ -8,7 +8,7 @@
                     @{{ item.name }}
                 </div>
             </dt>
-            <dd class="font-medium text-ct-neutral">@{{ item.base_price_incl_tax | price }}</dd>
+            <dd class="text-ct-neutral">@{{ item.base_price_incl_tax | price }}</dd>
         </div>
     </div>
 </div>
