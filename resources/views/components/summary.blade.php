@@ -1,20 +1,9 @@
 <x-rapidez-ct::separated-listing>
     <li>
-        <toggler open>
-            <div class="flex flex-col w-full" slot-scope="{ isOpen, toggle }" >
-                <div @click="toggle" class="flex w-full justify-between">
-                    <div class="flex gap-x-1">
-                        <span>@lang('Total products') (@{{ Math.round(cart.total_quantity) }})</span>
-                        <x-heroicon-o-chevron-down class="text-inactive w-3 stroke-2 transition-all" ::class="{ 'rotate-180': isOpen }" />
-                    </div>
-                    <div class="font-medium text-ct-neutral text-base">@{{ cart.prices.subtotal_including_tax.value | price }}</div>
-                </div>
-                <div v-show="isOpen" v-for="item in cart.items" class="text-ct-inactive">
-                    <span class="text-ct-neutral">@{{ item.quantity }}x</span>
-                    @{{ item.product.name }}
-                </div>
-            </div>
-        </toggler>
+        <div class="flex w-full justify-between items-center">
+            <span>@lang('Total products') (@{{ Math.round(cart.total_quantity) }})</span>
+            <div class="font-medium text-ct-neutral text-base">@{{ cart.prices.subtotal_including_tax.value | price }}</div>
+        </div>
     </li>
     <li v-if="cart.tax > 0">
         <div>@lang('Tax')</div>
