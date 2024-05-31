@@ -18,7 +18,7 @@
                 class="max-h-8"
                 v-bind:alt="method.carrier_title"
                 v-bind:src="`/vendor/shipping-icons/${method.carrier_title}.svg`"
-                onerror="this.onerror=null; this.src='/vendor/shipping-icons/envelope.svg'"
+                onerror="this.onerror=null; this.src='/vendor/shipping-icons/default.svg'"
             />
         </div>
     </x-rapidez-ct::input.radio>
