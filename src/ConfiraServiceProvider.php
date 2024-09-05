@@ -31,7 +31,7 @@ class ConfiraServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/rapidez-ct'),
-        ], 'views');
+        ], 'rapidez-confira-views');
 
         $this->publishes([
             __DIR__.'/../config/rapidez/confira.php' => config_path('rapidez/confira.php'),
