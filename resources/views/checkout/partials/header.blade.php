@@ -1,11 +1,10 @@
 @include('rapidez-ct::components.slide-in.receipt')
 <div class="flex flex-wrap gap-y-3 max-xl:-mt-5 xl:mr-20">
-    <x-rapidez-ct::button.outline v-if="checkout.step == 2" class="flex items-center justify-center !p-0 w-12 h-12 lg:hidden" :href="route('cart')">
-        <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
-    </x-rapidez-ct::button.outline>
-    <x-rapidez-ct::button.outline v-else class="flex items-center justify-center !p-0 w-12 h-12 lg:hidden" v-on:click.prevent="goToStep(1)">
-        <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
-    </x-rapidez-ct::button.outline>
+    @isset($href)
+        <x-rapidez-ct::button.outline class="flex items-center justify-center !p-0 w-12 h-12 lg:hidden" :$href>
+            <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
+        </x-rapidez-ct::button.outline>
+    @endif
 
     <div class="flex lg:w-24 [&>*]:w-auto [&>*]:h-auto max-lg:flex-1 max-lg:h-12">
         <a href="{{ url('/') }}" class="sticky top-0 max-lg:mx-5 flex items-center lg:self-start max-lg:flex-1 lg:pt-4">
