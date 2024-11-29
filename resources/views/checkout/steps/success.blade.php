@@ -5,9 +5,9 @@
             <x-rapidez-ct::title>
                 @lang('Thank you for your order')
             </x-rapidez-ct::title>
-        
+
             <x-rapidez-ct::sections>
-                <x-rapidez-ct::card.inactive>
+                <x-rapidez-ct::card.inactive class="!bg-ct-primary-100 py-8 px-6 rounded-xl !border-b-0">
                     @include('rapidez-ct::checkout.partials.sections.success.order-completed-note')
                 </x-rapidez-ct::card.inactive>
             </x-rapidez-ct::sections>
@@ -21,7 +21,7 @@
 
                 <x-rapidez-ct::card.inactive>
                     @include('rapidez-ct::checkout.partials.sections.success.newsletter')
-                </x-rapidez-ct::card.inactive>  
+                </x-rapidez-ct::card.inactive>
                 <x-rapidez-ct::card.inactive>
                     @if (config('rapidez.checkout-theme.checkout.success.register'))
                         @include('rapidez-ct::checkout.partials.sections.success.create-account')

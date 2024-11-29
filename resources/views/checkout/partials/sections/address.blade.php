@@ -1,10 +1,10 @@
 <checkout-address v-slot="{ useCards, editing, toggleEdit }">
-    <x-rapidez-ct::card.inactive v-if="useCards && !editing">
+    <template v-if="useCards && !editing">
         @include('rapidez-ct::checkout.partials.address-cards')
         @include('rapidez-ct::checkout.partials.buttons.address')
-    </x-rapidez-ct::card.inactive>
+    </template>
 
-    <x-rapidez-ct::card.inactive v-else>
+    <template v-else>
         <graphql-mutation
             :query="config.queries.setNewShippingAddressesOnCart"
             :variables="{
@@ -48,5 +48,5 @@
                 @include('rapidez-ct::checkout.partials.shipping-billing-fields', ['type' => 'billing'])
             </fieldset>
         </graphql-mutation>
-    </x-rapidez-ct::card.inactive>
+    </template>
 </checkout-address>
