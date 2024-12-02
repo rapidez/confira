@@ -3,7 +3,7 @@
     <span class="whitespace-nowrap font-medium text-ct-inactive">
         @lang('Step :step / :total', [
             'step' => $currentStepKey + 1,
-            'total' => count($checkoutSteps) - 1,
+            'total' => count($checkoutSteps),
         ])
     </span>
     @foreach ($checkoutSteps as $checkoutStepKey => $checkoutStep)
