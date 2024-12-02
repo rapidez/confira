@@ -7,7 +7,7 @@
     <x-rapidez-ct::card.inactive>
         @include('rapidez-ct::checkout.partials.sections.address')
     </x-rapidez-ct::card.inactive>
-    <x-rapidez-ct::card.inactive>
+    <x-rapidez-ct::card.inactive class="[&_label]:ring-ct-inactive-100 [&_label]:ring">
         @include('rapidez-ct::checkout.partials.sections.newsletter')
     </x-rapidez-ct::card.inactive>
     <x-rapidez-ct::card.inactive>

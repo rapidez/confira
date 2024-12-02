@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col *:gap-x-4">
     <checkout-success-addresses :order="order">
         <div slot-scope="{ hideBilling, shipping, billing, pickup }" class="flex flex-1 border-t border-dashed justify-between pt-5">
             <template v-if="hideBilling">

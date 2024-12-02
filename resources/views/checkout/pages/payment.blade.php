@@ -27,6 +27,26 @@
                     }"
                 >
                     @include('rapidez::checkout.steps.payment_method')
+                    <x-rapidez-ct::toolbar>
+                        <x-rapidez-ct::button.outline :href="route('checkout', ['step' => 'credentials'])">
+                            @lang('Back to credentials')
+                        </x-rapidez-ct::button.outline>
+                        <graphql-mutation
+                            :query="config.queries.placeOrder"
+                            :variables="{ cart_id: mask }"
+                            :before-request="handleBeforePlaceOrderHandlers"
+                            :callback="handlePlaceOrder"
+                            mutate-event="placeOrder"
+                            redirect="{{ route('checkout.success') }}"
+                            v-slot="{ mutate, variables }"
+                        >
+                            <fieldset>
+                                <x-rapidez-ct::button.enhanced class="relative" type="submit" dusk="continue" loader>
+                                    @lang('Place order')
+                                </x-rapidez-ct::button.enhanced>
+                            </fieldset>
+                        </graphql-mutation>
+                    </x-rapidez-ct::toolbar>
                 </form>
                 <x-slot:sidebar>
                     @include('rapidez-ct::checkout.partials.sidebar.sidebar')

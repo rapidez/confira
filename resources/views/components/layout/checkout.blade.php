@@ -9,7 +9,7 @@
     </div>
     <x-rapidez-ct::layout.sidebar class="sticky top-0 flex flex-col justify-start pt-10 max-lg:hidden lg:ml-20 lg:h-screen xl:pt-12">
         <div class="absolute -left-20 inset-y-0 bg-ct-primary-100 w-screen"></div>
-        <div class="overflow-y-auto overflow-x-hidden">
+        <div class="overflow-y-auto overflow-x-hidden flex flex-1">
             <div class="flex flex-1 lg:pb-6">
                 <div class="sticky flex flex-col flex-1 top-12">
                     {{ $sidebar }}

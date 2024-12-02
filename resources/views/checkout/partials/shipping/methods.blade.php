@@ -17,8 +17,8 @@
     v-slot="{ mutate, variables }"
     v-if="!cart.is_virtual"
 >
-    <fieldset class="mt-5 flex flex-col gap-2" partial-submit="mutate" v-on:change="window.app.$emit('setShippingAddressesOnCart')">
-        <div v-for="(method, index) in cart.shipping_addresses[0]?.available_shipping_methods" class="mt-4 flex flex-col gap-2">
+    <fieldset class="flex flex-col gap-2" partial-submit="mutate" v-on:change="window.app.$emit('setShippingAddressesOnCart')">
+        <div v-for="(method, index) in cart.shipping_addresses[0]?.available_shipping_methods" class="flex flex-col gap-2">
             <x-rapidez-ct::input.radio
                 name="shipping_method"
                 v-model="variables.method"
