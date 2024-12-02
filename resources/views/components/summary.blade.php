@@ -4,7 +4,7 @@
         <div class="flex w-full justify-between items-center">
             <span>
                 @lang('Total products')
-                <span v-text="Math.round({{ $type }}.items.length)"></span>
+                (<span v-text="Math.round({{ $type }}.items.length)"></span>)
             </span>
             <div class="font-medium text-ct-neutral text-base" v-text="$options.filters.price({{ $type }}.prices?.subtotal_including_tax?.value ?? {{ $type }}.total?.subtotal?.value)"></div>
         </div>

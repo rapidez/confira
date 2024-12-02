@@ -10,10 +10,9 @@
         <a
             href="{{ route('checkout', $checkoutStep) }}"
             @class([
-                'aspect-square w-3 rounded',
-                'bg-ct-primary cursor-pointer' => $currentStepKey < $checkoutStepKey,
-                'bg-ct-border pointer-events-none' => $checkoutStepKey > $currentStepKey,
-                'outline-4 outline outline-ct-primary/20' => $checkoutStepKey === $currentStepKey
+                'bg-ct-accent aspect-square w-3 rounded',
+                '!bg-ct-disabled pointer-events-none' => $currentStepKey < $checkoutStepKey,
+                'outline-4 outline outline-ct-accent/20' => $checkoutStepKey === $currentStepKey
             ])
         ></a>
     @endforeach

@@ -39,6 +39,10 @@ class ConfiraServiceProvider extends ServiceProvider
             __DIR__.'/../config/rapidez/confira.php' => config_path('rapidez/confira.php'),
         ], 'rapidez-confira-config');
 
+        $this->publishes([
+            __DIR__ . '/../resources/shipping-icons' => public_path('vendor/shipping-icons'),
+        ], 'shipping-icons');
+
         return $this;
     }
 

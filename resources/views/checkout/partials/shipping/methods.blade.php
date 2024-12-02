@@ -33,7 +33,7 @@
                     <span class="text-ct-neutral font-medium text-base">@{{ method.carrier_title }}</span>
                     <span class="text-ct-inactive text-sm">@{{ method.method_title }}</span>
                 </div>
-                <div class="text-right text-sm font-medium">
+                <div class="text-right text-sm font-medium shrink-0">
                     <img
                         width="32"
                         height="32"
