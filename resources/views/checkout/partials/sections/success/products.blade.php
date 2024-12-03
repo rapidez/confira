@@ -11,7 +11,7 @@
                         height="100"
                         v-if="item.product_sku"
                     >
-                    <x-rapidez::no-image v-else class="h-24 w-24"/>
+                    <x-rapidez::no-image v-else class="size-24"/>
                 </div>
                 <div class="flex flex-1 flex-wrap justify-between gap-x-6 items-start">
                     <div class="flex-1">
