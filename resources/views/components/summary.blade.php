@@ -17,8 +17,6 @@
         <div>@{{ discount.label }}</div>
         <div class="text-ct-primary font-medium">@{{ discount.amount.value | price }}</div>
     </li>
-
-
     <li v-if="{{ $type }}?.shipping_method">
         <div>@lang('Shipping')</div>
         <div v-if="{{ $type }}?.total?.total_shipping.value > 0 || {{ $type }}?.shipping_addresses[0]?.selected_shipping_method?.amount?.value > 0" class="font-medium text-ct-neutral">
@@ -28,9 +26,8 @@
             @lang('Free')
         </div>
     </li>
-
     <li class="border-t border-dashed mt-2.5">
         <div class="text-base text-ct-neutral">@lang('Total price')</div>
-        <div class="font-bold text-lg text-ct-neutral" v-text="$options.filters.price({{ $type }}?.prices?.grand_total?.value || {{ $type }}?.total?.grand_total?.value)"></div>
+        <div class="font-semibold text-lg text-ct-neutral" v-text="$options.filters.price({{ $type }}?.prices?.grand_total?.value || {{ $type }}?.total?.grand_total?.value)"></div>
     </li>
 </x-rapidez-ct::separated-listing>

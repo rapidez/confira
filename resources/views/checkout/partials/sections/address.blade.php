@@ -1,11 +1,11 @@
 <checkout-address v-slot="{ useCards, editing, toggleEdit }">
-    <template v-if="useCards && !editing">
-        @include('rapidez-ct::checkout.partials.address-cards')
-        @include('rapidez-ct::checkout.partials.buttons.address')
-    </template>
+    <div class="contents">
+        <template v-if="useCards && !editing">
+            @include('rapidez-ct::checkout.partials.address-cards')
+            @include('rapidez-ct::checkout.partials.buttons.address')
+        </template>
 
-    <template v-else>
-        <div class="contents">
+        <template v-else>
             <graphql-mutation
                 :query="config.queries.setNewShippingAddressesOnCart"
                 :variables="{
@@ -27,7 +27,7 @@
                     @include('rapidez-ct::checkout.partials.shipping-billing-fields', ['type' => 'shipping'])
                 </fieldset>
             </graphql-mutation>
-
+            
             <graphql-mutation
                 :query="config.queries.setNewBillingAddressOnCart"
                 :variables="JSON.parse(JSON.stringify({
@@ -49,6 +49,6 @@
                     @include('rapidez-ct::checkout.partials.shipping-billing-fields', ['type' => 'billing'])
                 </fieldset>
             </graphql-mutation>
-        </div>
-    </template>
+        </template>
+    </div>
 </checkout-address>
