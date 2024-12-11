@@ -15,7 +15,6 @@
                     country_code: cart.shipping_addresses[0]?.country.code || window.address_defaults.country_code
                 }"
                 group="shipping"
-                :before-request="(query, variables, options) => [variables.customer_address_id ? config.queries.setExistingShippingAddressesOnCart : query, variables, options]"
                 :callback="updateCart"
                 :error-callback="checkResponseForExpiredCart"
                 :watch="false"
@@ -27,7 +26,7 @@
                     @include('rapidez-ct::checkout.partials.shipping-billing-fields', ['type' => 'shipping'])
                 </fieldset>
             </graphql-mutation>
-            
+
             <graphql-mutation
                 :query="config.queries.setNewBillingAddressOnCart"
                 :variables="JSON.parse(JSON.stringify({
@@ -37,7 +36,6 @@
                     same_as_shipping: !cart.is_virtual && (cart?.billing_address?.same_as_shipping ?? true),
                     country_code: cart.billing_address?.country.code || window.address_defaults.country_code
                 }))"
-                :before-request="(query, variables, options) => [variables.customer_address_id ? config.queries.setExistingBillingAddressOnCart : query, variables, options]"
                 :callback="updateCart"
                 :error-callback="checkResponseForExpiredCart"
                 :watch="false"
