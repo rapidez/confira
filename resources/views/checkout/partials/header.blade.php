@@ -1,25 +1,26 @@
-@include('rapidez-ct::components.slide-in.receipt')
+<div class="lg:hidden">
+    @include('rapidez-ct::components.slide-in.receipt')
+</div>
 <div class="flex flex-wrap gap-y-3 max-xl:-mt-5 xl:mr-20">
-    <x-rapidez-ct::button.outline v-if="checkout.step == 2" class="flex items-center justify-center !p-0 w-12 h-12 lg:hidden" :href="route('cart')">
-        <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
-    </x-rapidez-ct::button.outline>
-    <x-rapidez-ct::button.outline v-else class="flex items-center justify-center !p-0 w-12 h-12 lg:hidden" v-on:click.prevent="goToStep(1)">
-        <x-heroicon-o-arrow-long-left class="w-6 h-6"/>
-    </x-rapidez-ct::button.outline>
+    @isset($href)
+        <x-rapidez-ct::button.outline class="flex items-center justify-center !p-0 size-12 lg:hidden" :$href>
+            <x-heroicon-o-arrow-long-left class="size-6"/>
+        </x-rapidez-ct::button.outline>
+    @endif
 
-    <div class="flex lg:w-24 [&>*]:w-auto [&>*]:h-auto max-lg:flex-1 max-lg:h-12">
-        <a href="{{ url('/') }}" class="sticky top-0 max-lg:mx-5 flex items-center lg:self-start max-lg:flex-1 lg:pt-4">
-            <div class="w-inherit flex-1">
+    <div class="flex lg:w-24 *:w-auto *:h-auto max-lg:flex-1 max-lg:h-12">
+        <a href="{{ url('/') }}" class="sticky top-0 max-lg:mx-5 flex items-center lg:self-start max-lg:flex-1 lg:pt-4 max-w-full">
+            <div class="w-inherit flex-1 *:w-auto *:h-auto *:max-w-full max-w-full h-full *:max-h-full">
                 <x-rapidez-ct::logo />
             </div>
         </a>
     </div>
     <x-rapidez-ct::button.inactive for="slide-in" class="lg:hidden">
         <span class="relative">
-            <span class="absolute flex items-center justify-center w-4 h-4 -right-2 -top-1.5 rounded-full bg-ct-primary text-white text-xs">
+            <span class="absolute flex items-center font-semibold justify-center size-4 -right-2 -top-1.5 rounded-full bg-ct-primary text-white text-xs">
                 @{{ Math.round(cart.total_quantity) }}
             </span>
-            <x-heroicon-o-shopping-cart class="w-6 h-6"/>
+            <x-heroicon-o-shopping-cart class="size-6"/>
         </span>
         @lang('My order')
     </x-rapidez-ct::button.inactive>

@@ -7,22 +7,17 @@
             {{ $slot }}
         </div>
     </div>
-    <x-rapidez-ct::layout.sidebar class="sticky top-0 flex flex-col justify-start pt-10 max-lg:hidden lg:ml-20 lg:h-screen xl:pt-12 overflow-y-auto overflow-x-hidden">
-        <div class="flex flex-1 lg:pb-6">
-            <div class="sticky flex flex-col flex-1 top-12">
-                {{ $sidebar }}
+    <x-rapidez-ct::layout.sidebar class="sticky top-0 flex flex-col justify-start pt-10 max-lg:hidden lg:ml-20 lg:h-screen xl:pt-12">
+        <div class="absolute -left-20 inset-y-0 bg-ct-primary-100 w-screen"></div>
+        <div class="overflow-y-auto overflow-x-hidden flex flex-1 scrollbar-hide">
+            <div class="flex flex-1 lg:pb-6">
+                <div class="sticky flex flex-col flex-1 top-12">
+                    {{ $sidebar }}
+                </div>
             </div>
         </div>
     </x-rapidez-ct::layout.sidebar>
     <div class="lg:hidden">
         @include('rapidez-ct::checkout.partials.sidebar.bottom-links')
-    </div>
-</div>
-
-<div class="fixed inset-0 overflow-hidden -z-10 pointer-events-none max-lg:hidden">
-    <div class="container flex justify-end">
-        <x-rapidez-ct::layout.sidebar class="h-screen relative">
-            <div class="absolute -left-20 bg-ct-primary-100 w-screen inset-y-0"></div>
-        </x-rapidez-ct::layout.sidebar>
     </div>
 </div>

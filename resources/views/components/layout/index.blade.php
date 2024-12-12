@@ -7,7 +7,7 @@
             {{ $slot }}
         </div>
     </div>
-    <x-rapidez-ct::layout.sidebar>
+    <x-rapidez-ct::layout.sidebar :attributes="$sidebar->attributes">
         {{ $sidebar }}
     </x-rapidez-ct::layout.sidebar>
 </div>

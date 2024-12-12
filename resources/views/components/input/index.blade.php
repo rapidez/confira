@@ -1,5 +1,5 @@
 @props(['label' => false])
-<label {{ $attributes->only(['v-if', 'v-else', 'v-else-if', 'class'])->merge(['class' => 'relative flex flex-col gap-y-1.5 sm:gap-y-2 text-sm']) }}>
+<label {{ $attributes->only(['v-if', 'v-else', 'v-else-if', 'v-cloak', 'class'])->merge(['class' => 'relative flex flex-col gap-y-1.5 sm:gap-y-2 text-sm']) }}>
     <input {{ $attributes->merge([
         'id' => $attributes->get('name'),
         'placeholder' => $attributes->get('placeholder'),

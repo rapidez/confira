@@ -1,7 +1,5 @@
-<x-rapidez-ct::card.inactive>
-    <p class="text-ct-inactive font-medium text-base">
-        @lang('Shipping method')
-    </p>
+<x-rapidez-ct::title.lg class="mb-5">
+    @lang('Shipping method')
+</x-rapidez-ct::title.lg>
 
-    @include('rapidez-ct::checkout.partials.shipping.methods')
-</x-rapidez-ct::card.inactive>
+@include('rapidez-ct::checkout.partials.shipping.methods')
