@@ -40,11 +40,9 @@
                             redirect="{{ route('checkout.success') }}"
                             v-slot="{ mutate, variables }"
                         >
-                            <fieldset>
-                                <x-rapidez::button.conversion class="relative" type="submit" dusk="continue" loader>
-                                    @lang('Place order')
-                                </x-rapidez::button.conversion>
-                            </fieldset>
+                            <x-rapidez::button.conversion class="relative" type="submit" dusk="continue" loader>
+                                @lang('Place order')
+                            </x-rapidez::button.conversion>
                         </graphql-mutation>
                     </x-rapidez-ct::toolbar>
                 </form>

@@ -1,6 +1,6 @@
 @slots(['header', 'sidebar'])
 <div class="fixed -top-px h-1.5 inset-x-0 w-full bg-primary z-20"></div>
-<div {{ $attributes->class('flex flex-wrap gap-x-20 text-sm max-lg:flex-col') }}>
+<div {{ $attributes->class('flex flex-wrap gap-x-20 text-sm max-lg:flex-col min-h-dvh') }}>
     <div class="flex flex-wrap max-xl:flex-col flex-1 max-lg:mb-10 max-lg:pt-6 max-lg:container">
         {{ $header }}
         <div class="flex-1 pt-6 lg:pt-3 xl:pt-12 lg:pb-28">

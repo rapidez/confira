@@ -17,9 +17,9 @@
     v-slot="{ mutate, variables }"
     v-if="!cart.is_virtual"
 >
-    <fieldset class="flex flex-col gap-2" partial-submit="mutate" v-on:change="window.app.$emit('setShippingAddressesOnCart')">
-        <div v-for="(method, index) in cart.shipping_addresses[0]?.available_shipping_methods" class="flex flex-col gap-2">
-            <x-rapidez-ct::input.radio
+    <fieldset class="flex flex-col gap-3" partial-submit="mutate" v-on:change="window.app.$emit('setShippingAddressesOnCart')">
+        <div v-for="(method, index) in cart.shipping_addresses[0]?.available_shipping_methods">
+            <x-rapidez-ct::input.radio.tile
                 name="shipping_method"
                 v-model="variables.method"
                 v-bind:value="method.carrier_code+'/'+method.method_code"
@@ -29,21 +29,21 @@
                 class="!py-4"
                 required
             >
-                <div class="flex flex-col md:w-3/5">
-                    <span class="font-medium text-base">@{{ method.carrier_title }}</span>
-                    <span class="text-muted text-sm">@{{ method.method_title }}</span>
-                </div>
-                <div class="text-right text-sm font-medium shrink-0">
-                    <img
-                        width="32"
-                        height="32"
-                        class="max-h-8"
-                        v-bind:alt="method.carrier_title"
-                        v-bind:src="`/vendor/shipping-icons/${method.carrier_title}.svg`"
-                        onerror="this.onerror=null; this.src='/vendor/shipping-icons/default.svg'"
-                    />
-                </div>
-            </x-rapidez-ct::input.radio>
+            <div class="flex flex-col md:w-3/5">
+                <span class="font-medium text-sm">@{{ method.carrier_title }}</span>
+                <span class="text-muted text-xs">@{{ method.method_title }}</span>
+            </div>
+            <div class="text-right text-sm font-medium shrink-0">
+                <img
+                    width="32"
+                    height="32"
+                    class="max-h-10 w-full h-auto object-contain"
+                    v-bind:alt="method.carrier_title"
+                    v-bind:src="`/vendor/shipping-icons/${method.carrier_title}.svg`"
+                    onerror="this.onerror=null; this.src='/vendor/shipping-icons/default.svg'"
+                />
+            </div>
+            </x-rapidez-ct::input.radio.tile>
         </div>
     </fieldset>
 </graphql-mutation>

@@ -27,7 +27,7 @@
                 >
                     @include('rapidez-ct::checkout.steps.credentials')
                     <x-rapidez-ct::toolbar>
-                        <x-rapidez::button.outline :href="route('cart')" class="grid-span-1">
+                        <x-rapidez::button.outline :href="route('cart')">
                             @lang('Back to cart')
                         </x-rapidez::button.outline>
 
