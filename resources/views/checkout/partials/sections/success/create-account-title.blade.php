@@ -1,3 +1,3 @@
-<p class="text-base text-ct-inactive font-medium">
+<p class="text-base text-muted font-medium">
     @lang('Register account')
 </p>

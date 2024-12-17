@@ -1,4 +1,4 @@
-<p class="text-base text-ct-neutral font-medium">
+<p class="text-base font-medium">
     @lang('We will get to work for you right away')
 </p>
 <p class="mt-2 text-sm">

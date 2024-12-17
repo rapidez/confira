@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="overflow-clip">
-        <div class="container">
+        <div class="lg:container xl:max-w-screen-xl">
             <x-rapidez-ct::layout.checkout>
                 <x-slot:header>
                     @include('rapidez-ct::checkout.partials.header', ['href' => route('cart')])
@@ -29,13 +29,13 @@
                 >
                     @include('rapidez-ct::checkout.steps.login')
                     <x-rapidez-ct::toolbar>
-                        <x-rapidez-ct::button.outline :href="route('cart')">
+                        <x-rapidez::button.outline :href="route('cart')">
                             @lang('Back to cart')
-                        </x-rapidez-ct::button.outline>
+                        </x-rapidez::button.outline>
 
-                        <x-rapidez-ct::button.enhanced loader type="submit" dusk="continue" >
+                        <x-rapidez::button.conversion loader type="submit" dusk="continue" >
                             @lang('Next')
-                        </x-rapidez-ct::button.enhanced>
+                        </x-rapidez::button.conversion>
                     </x-rapidez-ct::toolbar>
                 </form>
             </x-rapidez-ct::layout.checkout>

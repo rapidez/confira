@@ -8,7 +8,7 @@
     :error-callback="checkResponseForExpiredCart"
     v-slot="{ mutate, variables }"
 >
-    <form v-on:submit.prevent="mutate" class="flex w-full gap-x-3 gap-y-5 max-md:flex-col items-center">
+    <form v-on:submit.prevent="mutate" class="flex w-full gap-y-3 flex-col">
         <x-rapidez-ct::input
             :label="__('Enter code')"
             class="flex-1 max-md:w-full"
@@ -18,8 +18,8 @@
             v-bind:disabled="$root.loading"
             required
         />
-        <x-rapidez-ct::button.outline type="submit" class="w-full self-center">
+        <x-rapidez::button.outline type="submit" class="w-full self-center">
             @lang('Apply')
-        </x-rapidez-ct::button.outline>
+        </x-rapidez::button.outline>
     </form>
 </graphql-mutation>
