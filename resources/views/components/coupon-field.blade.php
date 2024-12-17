@@ -18,8 +18,8 @@
             v-bind:disabled="$root.loading"
             required
         />
-        <x-rapidez-ct::button.outline type="submit" class="w-full self-center">
+        <x-rapidez::button.outline type="submit" class="w-full self-center">
             @lang('Apply')
-        </x-rapidez-ct::button.outline>
+        </x-rapidez::button.outline>
     </form>
 </graphql-mutation>

@@ -11,7 +11,7 @@
     </checkout-success-addresses>
     <div class="flex flex-1 border-t border-dashed justify-between pt-5 mt-6">
         <div class="flex-1">
-            <p class="text-ct-neutral text-base font-medium mb-2.5 pr-8">
+            <p class="text-base font-medium mb-2.5 pr-8">
                 @lang('Payment method')
             </p>
             <div class="flex flex-1 flex-wrap justify-between">
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="flex-1">
-            <p class="text-ct-neutral text-base font-medium mb-2.5 pr-8">
+            <p class="text-base font-medium mb-2.5 pr-8">
                 @lang('Delivery method')
             </p>
             <div class="flex flex-1 flex-wrap justify-between">

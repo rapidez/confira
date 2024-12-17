@@ -1,5 +1,5 @@
 @props(['required' => false])
-<span {{ $attributes->class('text-ct-inactive text-sm') }}>
+<span {{ $attributes->class('text-muted text-sm') }}>
     {{ $slot }}
     @if ($required)
         <span>*</span>

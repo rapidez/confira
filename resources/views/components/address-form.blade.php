@@ -40,14 +40,16 @@
             :placeholder="__('Telephone')"
         />
     @endif
-    <x-rapidez-ct::input.country-select
-        class="col-span-full sm:col-span-3"
-        name="{{ $type }}_country"
-        label="{{ __('Country') }}"
-        v-model="{{ $address }}.{{ $countryKey }}"
-        required
-        :placeholder="__('Country')"
-    />
+
+    <label class="col-span-full sm:col-span-3">
+        <x-rapidez-ct::input.select.country
+            :label="__('Country')"
+            v-model="{{ $address }}.{{ $countryKey }}"
+            required
+            :placeholder="__('Country')"
+            name="{{ $type }}_country"
+        />
+    </label>
     <x-rapidez-ct::input
         class="col-span-full sm:col-span-2"
         name="{{ $type }}_postcode"
