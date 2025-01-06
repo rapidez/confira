@@ -1,4 +1,4 @@
-<x-rapidez-ct::slide-in>
+<x-rapidez-ct::slide-in v-if="cart">
     <label
         for="slide-in"
         class="absolute z-10 w-7 h-7 right-3 top-5 peer-checked:text-primary"
