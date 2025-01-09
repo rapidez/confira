@@ -14,11 +14,11 @@
 </div>
 
 <div class="flex flex-col !mt-0">
-    <div v-if="order.tax_amount" class="flex justify-between order-first mt-2">
+    <dl v-if="order.tax_amount" class="flex justify-between order-first mt-2">
         <dt class="text-muted">@lang('Tax')</dt>
-        <dd class="font-mediuml">@{{ order.tax_amount | price }}</dd>
-    </div>
-    <div v-if="order.shipping_amount" class="flex justify-between mt-2">
+        <dd class="font-medium">@{{ order.tax_amount | price }}</dd>
+    </dl>
+    <dl v-if="order.shipping_amount" class="flex justify-between mt-2">
         <dt class="text-muted">@lang('Shipping')</dt>
         <dd v-if="order.shipping_amount > 0" class="font-medium">
             @{{ order.shipping_amount | price }}
@@ -26,9 +26,9 @@
         <dd v-else class="font-medium">
             @lang('Free')
         </dd>
-    </div>
-    <div v-if="order.grand_total" class="flex items-center order-last justify-between border-t border-dashed pt-3 mt-4">
+    </dl>
+    <dl v-if="order.grand_total" class="flex items-center order-last justify-between border-t border-dashed pt-3 mt-4">
         <dt class="text-base font-medium">@lang('Total price')</dt>
         <dd class="font-bold text-xl">@{{ order.grand_total | price }}</dd>
-    </div>
+    </dl>
 </div>

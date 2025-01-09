@@ -27,7 +27,7 @@
                     }"
                 >
                     @include('rapidez::checkout.steps.payment_method')
-                    <x-rapidez-ct::toolbar>
+                    <x-rapidez-ct::toolbar class="*:flex-1 max-sm:flex-col-reverse">
                         <x-rapidez::button.outline :href="route('checkout', ['step' => 'credentials'])">
                             @lang('Back to credentials')
                         </x-rapidez::button.outline>

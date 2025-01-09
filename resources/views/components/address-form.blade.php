@@ -6,8 +6,8 @@
         label="Firstname"
         v-model="{{ $address }}.firstname"
         @class([
-            'max-sm:col-span-3 col-span-2',
-            '!col-span-full sm:!col-span-3' => !Rapidez::config('customer/address/middlename_show', 0),
+            'sm:col-span-2 col-span-3' => Rapidez::config('customer/address/middlename_show', 0),
+            'col-span-full sm:col-span-3' => !Rapidez::config('customer/address/middlename_show', 0),
         ])
         required
         :placeholder="__('Firstname')"
@@ -30,8 +30,9 @@
         required
         :placeholder="__('Lastname')"
         @class([
-            'col-span-full sm:col-span-2',
-            'sm:!col-span-3' => !Rapidez::config('customer/address/middlename_show', 0),
+            'col-span-full',
+            'sm:col-span-2' => Rapidez::config('customer/address/middlename_show', 0),
+            'sm:col-span-3' => !Rapidez::config('customer/address/middlename_show', 0),
         ])
     />
     @if (Rapidez::config('customer/address/telephone_show', 'req'))

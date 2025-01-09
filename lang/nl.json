@@ -10,5 +10,6 @@
     "The Netherlands": "Nederland",
     "Total products": "Totaal aantal producten",
     "We will send a confirmation of your order :orderid to <strong>:email</strong>": "We sturen een bevestiging van uw bestelling :orderid naar <strong>:email</strong>",
-    "You ordered this": "U heeft dit besteld"
+    "You ordered this": "U heeft dit besteld",
+    "We'll email your order confirmation and check if you have an account for faster checkout.": "Op dit e-mailadres ontvang je de orderbevestiging. Ook checken we of je al een account hebt."
 }

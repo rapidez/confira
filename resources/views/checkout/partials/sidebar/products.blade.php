@@ -2,7 +2,7 @@
     <div slot-scope="{ toggle, isOpen }" class="*:pt-2.5 first:*:pt-0 mb-2.5 flex w-full flex-col gap-2.5 divide-y divide-dashed border-b border-dashed pb-2.5">
         <div v-for="(item, index) in cart.items" v-show="isOpen || index < 2" class="flex gap-3">
             <div class="bg-primary/10">
-                <img v-if="item.product.image" class="max-h-20 w-20 shrink-0 object-contain mix-blend-darken bg-white" :alt="item.product.name" :src="'/storage/{{ config('rapidez.store') }}/resizes/200/magento' + item.product.image.url.replace(config.media_url, '') + '.webp'">
+                <img v-if="item.product.image" class="max-h-20 w-20 shrink-0 object-contain mix-blend-darken bg-white" :alt="item.product.name" :src="resizedPath(item.product.image.url + '.webp', '200')">
             </div>
             <div class="flex flex-col">
                 <span class="line-clamp-1 text-sm font-semibold">

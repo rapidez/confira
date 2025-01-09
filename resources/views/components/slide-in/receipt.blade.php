@@ -3,7 +3,7 @@
         for="slide-in"
         class="absolute z-10 w-7 h-7 right-3 top-5 peer-checked:text-primary"
     >
-        <x-heroicon-o-x-mark class="text-muted w-7 h-7" />
+        <x-heroicon-o-x-mark class="text-muted size-7" />
     </label>
     <x-rapidez-ct::title class="mb-4">
         @lang('Overview')
