@@ -116,7 +116,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_addition"
                 v-model="{{ $address }}.street[2]"
-                :placeholder="__('Addition')"
+                placeholder
             />
         </x-rapidez-ct::label.animated>
     @endif
