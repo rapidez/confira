@@ -1,13 +1,17 @@
 <div>
     <toggler>
         <div class="relative" slot-scope="{ isOpen, toggle }">
-            <x-rapidez-ct::input
-                :label="__('Password')"
-                type="password"
-                v-bind:type="isOpen ? 'text' : 'password'"
-                {{ $attributes }}
-            />
-
+            <x-rapidez-ct::label.animated>
+                <x-slot:label>
+                    @lang('Password')
+                </x-slot:label>
+                <x-rapidez-ct::input.animated
+                    type="password"
+                    v-bind:type="isOpen ? 'text' : 'password'"
+                    placeholder
+                    {{ $attributes }}
+                />
+            </x-rapidez-ct::label.animated>
             
             @if (!$attributes['disabled'] ?? false)
                 <div v-on:click="toggle" class="absolute right-5 top-1/2 -translate-y-1/2 cursor-pointer">

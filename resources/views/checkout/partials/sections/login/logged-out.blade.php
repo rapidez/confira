@@ -1,15 +1,19 @@
 <checkout-login v-slot="checkoutLogin">
     <fieldset partial-submit="go" class="grid gap-4 sm:gap-5 md:items-end md:grid-cols-2">
-        <x-rapidez-ct::input
-            label="Email"
-            name="email"
-            type="email"
-            v-model="checkoutLogin.email"
-            v-bind:disabled="loggedIn"
-            class="justify-center"
-            required
-            :placeholder="__('Enter your e-mail address')"
-        />
+        <x-rapidez-ct::label.animated>
+            <x-slot:label>
+                @lang('Email')
+            </x-slot:label>
+            <x-rapidez-ct::input.animated
+                name="email"
+                type="email"
+                v-model="checkoutLogin.email"
+                v-bind:disabled="loggedIn"
+                class="justify-center"
+                required
+                placeholder
+            />
+        </x-rapidez-ct::label.animated>
 
         <p v-if="checkoutLogin.isEmailAvailable" class="self-end text-muted md:min-h-14 flex items-center">
             @lang('We\'ll email your order confirmation and check if you have an account for faster checkout.')
@@ -17,7 +21,6 @@
 
         <template v-if="!loggedIn && (!checkoutLogin.isEmailAvailable || checkoutLogin.createAccount)">
             <x-rapidez-ct::input.password
-                placeholder="password"
                 name="password"
                 v-model="checkoutLogin.password"
                 required
@@ -34,27 +37,36 @@
         @endif
         <template v-if="!loggedIn && checkoutLogin.createAccount">
             <x-rapidez-ct::input.password
-                placeholder="password repeat"
                 name="password_repeat"
                 v-model="checkoutLogin.password_repeat"
                 required
             />
-            <x-rapidez-ct::input
-                placeholder="Firstname"
-                label="Firstname"
-                name="firstname"
-                type="text"
-                v-model="checkoutLogin.firstname"
-                required
-            />
-            <x-rapidez-ct::input
-                placeholder="lastname"
-                label="Lastname"
-                name="lastname"
-                type="text"
-                v-model="checkoutLogin.lastname"
-                required
-            />
+
+            <x-rapidez-ct::label.animated>
+                <x-slot:label>
+                    @lang('Firstname')
+                </x-slot:label>
+                <x-rapidez-ct::input.animated
+                    name="firstname"
+                    type="text"
+                    v-model="checkoutLogin.firstname"
+                    required
+                    placeholder
+                />
+            </x-rapidez-ct::label.animated>
+
+            <x-rapidez-ct::label.animated>
+                <x-slot:label>
+                    @lang('Lastname')
+                </x-slot:label>
+                <x-rapidez-ct::input.animated
+                    name="lastname"
+                    type="text"
+                    v-model="checkoutLogin.lastname"
+                    required
+                    placeholder
+                />
+            </x-rapidez-ct::label.animated>
         </template>
 
         <template v-if="!loggedIn && checkoutLogin.isEmailAvailable">

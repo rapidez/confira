@@ -3,15 +3,18 @@
     v-on:submit.prevent="mutate"
 >
     <div class="flex-1">
-            
-        <x-rapidez-ct::input
-            :label="__('Email')"
-            name="email-newsletter"
-            type="email"
-            required
-            v-model="variables.email"
-            :placeholder="__('Enter your email address')"
-        />
+        <x-rapidez-ct::label.animated>
+            <x-slot:label>
+                @lang('Email')
+            </x-slot:label>
+            <x-rapidez-ct::input.animated
+                name="email-newsletter"
+                type="email"
+                required
+                v-model="variables.email"
+                placeholder
+            />
+        </x-rapidez-ct::label.animated>
     </div>
     <x-rapidez::button.secondary
         class="relative whitespace-nowrap self-end"

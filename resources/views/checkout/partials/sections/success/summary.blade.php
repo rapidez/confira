@@ -5,7 +5,7 @@
             <dt class="flex gap-x-1 text-muted">
                 <div>
                     <span>@{{ Math.round(item.qty_ordered) }}x</span>
-                    <span class="text-muted">@{{ item.name }}</span>
+                    <span>@{{ item.name }}</span>
                 </div>
             </dt>
             <dd>@{{ item.base_price_incl_tax | price }}</dd>
