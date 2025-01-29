@@ -8,7 +8,7 @@
 
 @include('rapidez-ct::cart.partials.sidebar.payment')
 @include('rapidez-ct::cart.partials.sidebar.usps')
-<div class="mt-5 flex flex-wrap justify-between border-y border-dashed py-5 empty:hidden">
+<div class="mt-5 flex flex-wrap justify-between border-y border-dashed py-5 empty:hidden *:w-full">
     @include('rapidez-ct::checkout.partials.sidebar.user-info')
 </div>
 @include('rapidez-ct::checkout.partials.sidebar.bottom-links')

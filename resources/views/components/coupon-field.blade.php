@@ -8,18 +8,22 @@
     :error-callback="checkResponseForExpiredCart"
     v-slot="{ mutate, variables }"
 >
-    <form v-on:submit.prevent="mutate" class="flex w-full gap-x-3 gap-y-5 max-md:flex-col items-center">
-        <x-rapidez-ct::input
-            :label="__('Enter code')"
-            class="flex-1 max-md:w-full"
-            name="couponCode"
-            :placeholder="__('Enter code') . '...'"
-            v-model="variables.coupon_code"
-            v-bind:disabled="$root.loading"
-            required
-        />
-        <x-rapidez-ct::button.outline type="submit" class="w-full self-center">
+    <form v-on:submit.prevent="mutate" class="flex w-full gap-y-3 flex-col">
+        <x-rapidez-ct::label.animated class="flex-1 max-md:w-full">
+            <x-slot:label>
+                @lang('Enter code')
+            </x-slot:label>
+            <x-rapidez-ct::input.animated
+                name="couponCode"
+                placeholder
+                v-model="variables.coupon_code"
+                v-bind:disabled="$root.loading"
+                required
+            />
+        </x-rapidez-ct::label.animated>
+
+        <x-rapidez::button.outline type="submit" class="w-full self-center">
             @lang('Apply')
-        </x-rapidez-ct::button.outline>
+        </x-rapidez::button.outline>
     </form>
 </graphql-mutation>
