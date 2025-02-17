@@ -95,8 +95,8 @@
         :placeholder="__('City')"
     />
 
-    @if (Rapidez::config('customer/address/company_show', 0) || Rapidez::config('customer/address/taxvat_show', 0))
-        @if (Rapidez::config('customer/address/company_show', 0))
+    @if (Rapidez::config('customer/address/company_show', 'opt') || Rapidez::config('customer/address/taxvat_show', 0))
+        @if (Rapidez::config('customer/address/company_show', 'opt'))
             <x-rapidez-ct::input
                 class="col-span-3"
                 name="{{ $type }}_company"
