@@ -8,5 +8,5 @@
 >
     <button v-on:click="mutate" class="mt-1 text-xs" :dusk="'item-delete-' + index" title="{{ __('Remove') }}">
         <x-heroicon-o-trash class="text-muted w-5"/>
-    </button>   
+    </button>
 </graphql-mutation>

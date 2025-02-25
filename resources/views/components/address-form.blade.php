@@ -1,8 +1,6 @@
 @props(['type' => 'shipping', 'address' => 'variables', 'countryKey' => 'country_code'])
 
 <div class="grid gap-4 sm:gap-5 grid-cols-6">
-
-
     <x-rapidez-ct::label.animated
         @class([
             'sm:col-span-2 col-span-3' => Rapidez::config('customer/address/middlename_show', 0),
@@ -20,7 +18,6 @@
         />
     </x-rapidez-ct::label.animated>
 
-
     @if (Rapidez::config('customer/address/middlename_show', 0))
         <x-rapidez-ct::label.animated class="col-span-3 sm:col-span-2">
             <x-slot:label>
@@ -34,7 +31,7 @@
         </x-rapidez-ct::label.animated>
     @endif
 
-    <x-rapidez-ct::label.animated 
+    <x-rapidez-ct::label.animated
         @class([
             'col-span-full',
             'sm:col-span-2' => Rapidez::config('customer/address/middlename_show', 0),
@@ -77,7 +74,7 @@
             name="{{ $type }}_country"
         />
     </x-rapidez-ct::label.animated>
-    
+
     <x-rapidez-ct::label.animated class="col-span-full sm:col-span-2">
         <x-slot:label>
             @lang('Postcode')

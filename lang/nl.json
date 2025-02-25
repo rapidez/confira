@@ -1,15 +1,17 @@
 {
-    ":count of the requested quantity will be backordered": ":count van de aangevraagde hoeveelheid zal worden nageleverd",
     "Apply discount code": "Kortingscode toepassen",
+    "Create account": "Account aanmaken",
     "Disclaimer": "Disclaimer",
     "Discount": "Korting",
     "Enter code": "Code invoeren",
-    "Overview": "Overzicht",
+    "My order": "Mijn bestelling",
     "Privacy & security": "Privacy & beveiliging",
+    "Show all products": "Meer producten tonen",
+    "Show less products": "Minder producten tonen",
+    "Step :step / :total": "Stap :step / :total",
     "Terms and Conditions": "Algemene voorwaarden",
     "The Netherlands": "Nederland",
     "Total products": "Totaal aantal producten",
     "We will send a confirmation of your order :orderid to <strong>:email</strong>": "We sturen een bevestiging van uw bestelling :orderid naar <strong>:email</strong>",
-    "You ordered this": "U heeft dit besteld",
-    "We'll email your order confirmation and check if you have an account for faster checkout.": "Op dit e-mailadres ontvang je de orderbevestiging. Ook checken we of je al een account hebt."
+    "You ordered this": "U heeft dit besteld"
 }
