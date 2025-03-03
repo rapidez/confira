@@ -69,6 +69,7 @@
         </x-slot:label>
         <x-rapidez-ct::input.select.country
             v-model="{{ $address }}.{{ $countryKey }}"
+            v-on:change="() => {{ $address }}.region_id = null"
             required
             placeholder
             name="{{ $type }}_country"
