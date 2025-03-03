@@ -1,4 +1,4 @@
-@props(['type' => 'shipping', 'address' => 'variables', 'countryKey' => 'country_code'])
+@props(['type' => 'shipping', 'address' => 'variables', 'countryKey' => 'country_code', 'region' => 'region_id'])
 
 <div class="grid gap-4 sm:gap-5 grid-cols-6">
     <x-rapidez-ct::label.animated
@@ -69,7 +69,10 @@
         </x-slot:label>
         <x-rapidez-ct::input.select.country
             v-model="{{ $address }}.{{ $countryKey }}"
-            v-on:change="() => {{ $address }}.region_id = null"
+            v-on:change="() => {
+                {{ $address }}.region = {};
+                {{ $address }}.{{ $region }} = null;
+            }"
             required
             placeholder
             name="{{ $type }}_country"
@@ -83,7 +86,7 @@
         <x-rapidez-ct::input.select.region
             class="exists"
             name="{{ $type }}_region"
-            v-model="{{ $address }}.region_id"
+            v-model="{{ $address }}.{{ $region }}"
             country="{{ $address }}.{{ $countryKey }}"
             placeholder
         />
