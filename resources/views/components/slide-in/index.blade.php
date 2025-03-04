@@ -14,7 +14,7 @@
                     @endisset
                 </div>
             </div>
-            <label for="slide-in" class="fixed z-20 inset-x-0 bottom-0 top-1.5 bg-black/60 transition-all duration-500 opacity-0 pointer-events-none peer-checked:pointer-events-auto peer-checked:opacity-100"></label>
+            <label for="slide-in" class="fixed z-20 inset-x-0 bottom-0 top-1.5 bg-backdrop transition-all duration-500 opacity-0 pointer-events-none peer-checked:pointer-events-auto peer-checked:opacity-100"></label>
         </div>
     </template>
 </slide-in>
