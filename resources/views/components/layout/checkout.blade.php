@@ -7,7 +7,7 @@
             {{ $slot }}
         </div>
     </div>
-    <x-rapidez-ct::layout.sidebar class="sticky top-0 flex flex-col justify-start max-lg:hidden lg:ml-20 lg:h-screen !space-y-0">
+    <x-rapidez-ct::layout.sidebar class="sticky top-0 flex flex-col justify-start max-lg:hidden lg:ml-20 lg:h-screen space-y-0">
         <div class="absolute -left-20 inset-y-0 bg-primary/10 w-screen"></div>
         <div class="overflow-y-auto overflow-x-hidden flex flex-1 scrollbar-hide lg:pt-20 xl:pt-10">
             <div class="flex flex-1">
