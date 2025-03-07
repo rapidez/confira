@@ -4,7 +4,7 @@
     {{ $attributes->whereStartsWith('v-') }}
     @if (!$attributes->has('v-bind:shipping')) :shipping="{{ var_export($shipping) }}" @endif
     @if (!$attributes->has('v-bind:billing')) :billing="{{ var_export($billing) }}" @endif
-    v-slot="{ company, name, street, city, country, billing, shipping, isEmpty, customTitle }"
+    v-slot="{ company, name, street, city, region, country, billing, shipping, isEmpty, customTitle }"
 >
     <div {{ $attributes->whereDoesntStartWith('v-')->class('flex flex-col') }}>
         <template v-if="!isEmpty">
@@ -30,6 +30,7 @@
                     <li v-if="name">@{{ name }}</li>
                     <li v-if="street">@{{ street }}</li>
                     <li v-if="city">@{{ city }}</li>
+                    <li v-if="region">@{{ region }}</li>
                     <li v-if="country === 'NL'">@lang('The Netherlands')</li>
                     <li v-if="country !== 'NL'">@{{ country }}</li>
                 </ul>
