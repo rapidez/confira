@@ -16,32 +16,6 @@ Before installing this package, make sure you have:
 composer require rapidez/confira
 ```
 
-Confira adds the `ct-primary-100` color, which should be added to your tailwind config alongside the other checkout-theme colors like so:
-
-```diff
-colors: {
-    ct: {
-        enhanced: {
-            DEFAULT: '#40C42A',
-        },
-        inactive: {
-            DEFAULT: '#8A8275',
-            100: '#F6F4EE',
-        },
-        disabled: '#EBE8DE',
-        primary: {
-            DEFAULT: '#FEAB05',
-+           100: '#FEE8C3'
-        },
-        neutral: {
-            DEFAULT: '#625B50',
-        },
-        border: '#EAE7DC',
-        error: '#DF241D',
-    },
-},
-```
-
 ## Layout Configuration
 
 For the best experience with this theme, it's recommended to have a clean checkout page layout without header and footer. To achieve this, modify your project's `app.blade.php`:
