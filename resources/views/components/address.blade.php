@@ -10,8 +10,8 @@
         <template v-if="!isEmpty">
             @if ($check)
                 <template v-if="{{ $check }}">
-                    <div class="bg-ct-primary absolute inset-y-0 left-0 w-1 rounded-l-xl"></div>
-                    <x-heroicon-s-check class="text-ct-primary absolute right-5 top-7 w-5" />
+                    <div class="bg-primary absolute inset-y-0 left-0 w-1 rounded-l-xl"></div>
+                    <x-heroicon-s-check class="text-primary absolute right-5 top-7 w-5" />
                 </template>
             @endif
             <p class="text-base font-medium mb-2.5 pr-8">
