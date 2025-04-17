@@ -24,7 +24,8 @@
     "prefer-stable": true,
     "require": {
         "php": "^8.1",
-        "rapidez/checkout-theme": "^3.0"
+        "rapidez/checkout-theme": "^3.0",
+        "rapidez/core": "^3.4"
     },
     "autoload": {
         "psr-4": {
