@@ -1,4 +1,4 @@
-@props(['type' => 'shipping', 'address' => 'variables', 'countryKey' => 'country_code'])
+@props(['type' => 'shipping', 'address' => 'variables', 'countryKey' => 'country_code', 'region' => 'region_id'])
 
 <div class="grid gap-4 sm:gap-5 grid-cols-6">
     <x-rapidez-ct::label.animated
