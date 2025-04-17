@@ -69,26 +69,9 @@
         </x-slot:label>
         <x-rapidez-ct::input.select.country
             v-model="{{ $address }}.{{ $countryKey }}"
-            v-on:change="() => {
-                {{ $address }}.region = {};
-                {{ $address }}.{{ $region }} = null;
-            }"
             required
             placeholder
             name="{{ $type }}_country"
-        />
-    </x-rapidez-ct::label.animated>
-
-    <x-rapidez-ct::label.animated class="col-span-full sm:col-span-3 has-[.exists]:block hidden">
-        <x-slot:label>
-            @lang('Region')
-        </x-slot:label>
-        <x-rapidez-ct::input.select.region
-            class="exists"
-            name="{{ $type }}_region"
-            v-model="{{ $address }}.{{ $region }}"
-            country="{{ $address }}.{{ $countryKey }}"
-            placeholder
         />
     </x-rapidez-ct::label.animated>
 
