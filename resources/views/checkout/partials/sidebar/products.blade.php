@@ -28,7 +28,7 @@
                             @{{ option.label }}: @{{ option.values[0].label || option.values[0].value }}
                         </div>
                         <div v-for="option in config.cart_attributes" v-if="item.product.attribute_values?.[option] && typeof item.product.attribute_values[option] === 'object'">
-                            <p class="lowercase first-letter:uppercase">@{{ option.replace(/_/g, ' ') }}: <span v-html="item.product.attribute_values[option]?.join(', ')"></span></p>
+                            @{{ window.attributeLabel(option) }}: <span v-html="item.product.attribute_values[option]?.join(', ')"></span>
                         </div>
                     </div>
                 </div>
