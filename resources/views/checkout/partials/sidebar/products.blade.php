@@ -7,7 +7,7 @@
                     @{{ item.product.name }}
                 </span>
                 <div class="*:border-r last:*:border-r-0 last:*:pr-0 *:pr-2 flex flex-wrap gap-x-2 text-xs text-ct-inactive">
-                    <div class="*:border-r *:px-2 *:mb-2 *:leading-3 -mx-2 mt-2 flex flex-wrap text-xs text-inactive subpixel-antialiased">
+                    <div class="*:border-r *:px-2 *:mb-2 *:leading-3 last:*:border-r-0 -mx-2 mt-2 flex flex-wrap text-xs text-inactive subpixel-antialiased">
                         <div v-for="option in item.configurable_options">
                             @{{ option.value_label }}
                         </div>
@@ -15,7 +15,7 @@
                             @{{ option.label }}: @{{ option.values[0].label || option.values[0].value }}
                         </div>
                         <div v-for="option in config.cart_attributes" v-if="item.product.attribute_values?.[option] && typeof item.product.attribute_values[option] === 'object'">
-                            @{{ option }}: <span v-html="item.product.attribute_values[option]?.join(', ')"></span>
+                            @{{ window.attributeLabel(option) }}: <span v-html="item.product.attribute_values[option].join(', ')"></span>
                         </div>
                     </div>
                 </div>
