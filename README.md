@@ -2,6 +2,8 @@
 
 This package extends [rapidez/checkout-theme](https://github.com/rapidez/checkout-theme) with customized styling and components. It maintains all the functionality of the original checkout theme while providing a different visual experience.
 
+![](images/confira.png)
+
 ## Prerequisites
 
 Before installing this package, make sure you have:
