@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/...master)
+[Unreleased changes](https://github.com/rapidez/confira/compare/4.0.0...4.0.0)
+## [4.0.0](https://github.com/rapidez/confira/releases/tag/4.0.0) - 2025-06-05
+
+### Added
+
+- Rapidez v4 support (3d60cd4)
+
 ## [3.1.0](https://github.com/rapidez/confira/releases/tag/3.1.0) - 2025-04-17
 
 ### Added
