@@ -4,11 +4,19 @@ This package extends [rapidez/checkout-theme](https://github.com/rapidez/checkou
 
 ![](images/Rapidez-confira-options.gif)
 
+
 ## Prerequisites
 
 Before installing this package, make sure you have:
 1. A working [Rapidez](https://github.com/rapidez/rapidez) installation
 2. The [Rapidez Checkout Theme](https://github.com/rapidez/checkout-theme) installed and configured
+
+## Previews
+- Step 1 - Cart ([image](images/Rapidez-confira-cart.jpg))
+- Step 2 - Credentials ([image](images/Rapidez-confira-credentials.jpg))
+- Step 3 - Payment method ([image](images/Rapidez-confira-payment.jpg))
+- Step 4 - Order success ([image](images/Rapidez-confira-success.jpg))
+- Mobile ([image](images/Rapidez-confira-mobile.jpg))
 
 ## Installation
 
