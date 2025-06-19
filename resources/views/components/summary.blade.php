@@ -17,7 +17,7 @@
         <div>@{{ discount.label }}</div>
         <div class="text-green-700 font-semibold">@{{ discount.amount.value | price }}</div>
     </li>
-    <li v-if="{{ $type }}?.shipping_method">
+    <li v-if="{{ $type }}?.shipping_method || {{ $type }}?.shipping_addresses[0]?.selected_shipping_method?.amount">
         <div>@lang('Shipping')</div>
         <div v-if="{{ $type }}?.total?.total_shipping.value > 0 || {{ $type }}?.shipping_addresses[0]?.selected_shipping_method?.amount?.value > 0" class="font-medium">
             <span v-text="$options.filters.price({{ $type }}?.total?.total_shipping?.value ?? {{ $type }}?.shipping_addresses[0]?.selected_shipping_method?.amount?.value)"></span>
