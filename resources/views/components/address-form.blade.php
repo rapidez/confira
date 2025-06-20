@@ -74,6 +74,17 @@
             name="{{ $type }}_country"
         />
     </x-rapidez-ct::label.animated>
+    <x-rapidez-ct::label.animated class="col-span-full sm:col-span-3 has-[.exists]:block hidden">
+        <x-slot:label>
+            @lang('Region')
+        </x-slot:label>
+        <x-rapidez::input.select.region
+            class="exists"
+            name="{{ $type }}_region"
+            v-model="{{ $address }}.{{ $region }}"
+            country="{{ $address }}.{{ $countryKey }}"
+        />
+    </x-rapidez-ct::label.animated>
 
     <x-rapidez-ct::label.animated class="col-span-full sm:col-span-2">
         <x-slot:label>

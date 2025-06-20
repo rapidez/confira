@@ -31,7 +31,12 @@
             >
                 <div class="flex flex-col md:w-3/5">
                     <span class="font-medium text-sm">@{{ method.carrier_title }}</span>
-                    <span class="text-muted text-xs">@{{ method.method_title }}</span>
+                    <div class="text-muted text-xs flex gap-1">
+                        <span v-if="method.amount.value > 0" class="text-muted">@{{ method.amount.value | price }}</span>
+                        <span v-else class="text-primary">@lang('Free')</span>
+                        <span>-</span>
+                        <span>@{{ method.method_title }}</span>
+                    </div>
                 </div>
                 <div class="text-right text-sm font-medium shrink-0">
                     <img
