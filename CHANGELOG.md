@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/4.0.0...4.0.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/4.0.1...4.0.1)
+## [4.0.1](https://github.com/rapidez/confira/releases/tag/4.0.1) - 2025-06-20
+
+### Fixed
+
+- Small issues with shipping methods (#45)
+
 ## [4.0.0](https://github.com/rapidez/confira/releases/tag/4.0.0) - 2025-06-05
 
 ### Added
