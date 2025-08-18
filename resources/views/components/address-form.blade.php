@@ -13,6 +13,7 @@
         <x-rapidez-ct::input.animated
             name="{{ $type }}_firstname"
             v-model="{{ $address }}.firstname"
+            v-bind:disabled="$root.loading"
             required
             placeholder
         />
@@ -26,6 +27,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_middlename"
                 v-model="{{ $address }}.middlename"
+                v-bind:disabled="$root.loading"
                 placeholder
             />
         </x-rapidez-ct::label.animated>
@@ -44,6 +46,7 @@
         <x-rapidez-ct::input.animated
             name="{{ $type }}_lastname"
             v-model="{{ $address }}.lastname"
+            v-bind:disabled="$root.loading"
             required
             placeholder
         />
@@ -57,6 +60,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_telephone"
                 v-model="{{ $address }}.telephone"
+                v-bind:disabled="$root.loading"
                 placeholder
                 :required="Rapidez::config('customer/address/telephone_show', 'req') == 'req'"
             />
@@ -69,6 +73,7 @@
         </x-slot:label>
         <x-rapidez-ct::input.select.country
             v-model="{{ $address }}.{{ $countryKey }}"
+            v-bind:disabled="$root.loading"
             required
             placeholder
             name="{{ $type }}_country"
@@ -82,6 +87,7 @@
             class="exists"
             name="{{ $type }}_region"
             v-model="{{ $address }}.{{ $region }}"
+            v-bind:disabled="$root.loading"
             country="{{ $address }}.{{ $countryKey }}"
         />
     </x-rapidez-ct::label.animated>
@@ -94,6 +100,7 @@
             name="{{ $type }}_postcode"
             v-model="{{ $address }}.postcode"
             v-on:change="window.app.$emit('postcode-change', {{ $address }})"
+            v-bind:disabled="$root.loading"
             required
             placeholder
         />
@@ -109,6 +116,7 @@
                 name="{{ $type }}_housenumber"
                 v-model="{{ $address }}.street[1]"
                 v-on:change="window.app.$emit('postcode-change', {{ $address }})"
+                v-bind:disabled="$root.loading"
                 type="{{ Rapidez::config('customer/address/street_lines', 3) == 3 ? 'number' : 'text' }}"
                 required
                 placeholder
@@ -124,6 +132,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_addition"
                 v-model="{{ $address }}.street[2]"
+                v-bind:disabled="$root.loading"
                 placeholder
             />
         </x-rapidez-ct::label.animated>
@@ -136,6 +145,7 @@
         <x-rapidez-ct::input.animated
             name="{{ $type }}_street"
             v-model="{{ $address }}.street[0]"
+            v-bind:disabled="$root.loading"
             required
             placeholder
         />
@@ -148,6 +158,7 @@
         <x-rapidez-ct::input.animated
             name="{{ $type }}_city"
             v-model="{{ $address }}.city"
+            v-bind:disabled="$root.loading"
             required
             placeholder
         />
@@ -162,6 +173,7 @@
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_company"
                     v-model="{{ $address }}.company"
+                    v-bind:disabled="$root.loading"
                     placeholder
                 />
             </x-rapidez-ct::label.animated>
@@ -175,6 +187,7 @@
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_vat_id"
                     v-model="{{ $address }}.vat_id"
+                    v-bind:disabled="$root.loading"
                     :required="Rapidez::config('customer/address/taxvat_show', 0) == 'req'"
                     placeholder
                 />
