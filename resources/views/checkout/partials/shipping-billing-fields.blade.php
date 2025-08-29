@@ -9,7 +9,7 @@
 @endif
 
 <template @if($type == 'billing') v-if="!variables.same_as_shipping" @endif >
-    <x-rapidez-ct::address-form :$type/>
+    <x-rapidez-ct::address-form show-list :$type/>
 </template>
 
 @if ($type == 'billing')
