@@ -3,7 +3,7 @@
         @lang('Shipping address')
     </x-rapidez-ct::title.lg>
 @else
-    <x-rapidez-ct::title.lg class="mb-5 mt-9 pt-7 border-t border-dashed" v-if="!variables.same_as_shipping" v-cloak>   
+    <x-rapidez-ct::title.lg class="mb-5 mt-9 pt-7 border-t border-dashed" v-if="!variables.same_as_shipping" v-cloak>
         @lang('Billing address')
     </x-rapidez-ct::title.lg>
 @endif

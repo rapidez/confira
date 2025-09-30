@@ -64,6 +64,13 @@ php artisan vendor:publish --tag=rapidez-confira-views
 
 Note: It's recommended to only publish and modify the specific views you need to change, rather than all views. This makes it easier to maintain and update the package.
 
+## Browser tests
+
+- Make sure Confira is working in your browser
+- Run the tests with `yarn playwright test`
+- Alternatively, run the tests from a UI with `yarn playwright test --ui`
+- Update the screenshots with `yarn playwright test --update-snapshots`
+
 ## License
 
 GNU General Public License v3. Please see [License File](LICENSE) for more information.

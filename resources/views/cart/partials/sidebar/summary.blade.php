@@ -4,7 +4,7 @@
 
 <x-rapidez-ct::summary />
 
-<x-rapidez::button.conversion :href="route('checkout')" class="flex w-full items-center justify-center gap-1 !mt-0" dusk="checkout">
+<x-rapidez::button.conversion :href="route('checkout')" class="flex w-full items-center justify-center gap-1 !mt-0">
     @lang('To checkout')
 </x-rapidez::button.conversion>
 

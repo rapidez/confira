@@ -22,7 +22,7 @@
             />
         </x-rapidez-ct::label.animated>
 
-        <x-rapidez::button.outline type="submit" class="w-full self-center">
+        <x-rapidez::button.outline type="submit" class="w-full self-center" data-testid="apply-coupon">
             @lang('Apply')
         </x-rapidez::button.outline>
     </form>

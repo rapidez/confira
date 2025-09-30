@@ -15,7 +15,7 @@
                 </div>
                 <div class="flex flex-1 flex-wrap justify-between gap-x-6 items-start">
                     <div class="flex-1">
-                        <a class="font-medium" :href="item.url" dusk="cart-item-name">@{{ item.product_name }}</a>
+                        <a class="font-medium" :href="item.url">@{{ item.product_name }}</a>
                         <div v-for="option in item.selected_options" class="text-muted">
                             @{{ option.label }}: @{{ option.value }}
                         </div>

@@ -15,7 +15,7 @@
                 <x-rapidez-ct::title-progress-bar :$checkoutSteps :$currentStep :$currentStepKey>
                     @lang('Payment')
                 </x-rapidez-ct::title-progress-bar>
-                
+
                 <form
                     class="contents"
                     v-on:submit.prevent="(e) => {
@@ -40,7 +40,7 @@
                             redirect="{{ route('checkout.success') }}"
                             v-slot="{ mutate, variables }"
                         >
-                            <x-rapidez::button.conversion class="relative" type="submit" dusk="continue" loader>
+                            <x-rapidez::button.conversion class="relative" type="submit" data-testid="continue" loader>
                                 @lang('Place order')
                             </x-rapidez::button.conversion>
                         </graphql-mutation>
