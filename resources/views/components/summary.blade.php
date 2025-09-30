@@ -9,9 +9,9 @@
             <div class="font-medium text-base" v-text="$options.filters.price({{ $type }}.prices?.subtotal_including_tax?.value ?? {{ $type }}.total?.subtotal?.value)"></div>
         </div>
     </li>
-    <li v-if="{{ $type }}.tax > 0">
+    <li v-if="{{ $type }}.taxTotal > 0">
         <div>@lang('Tax')</div>
-        <div class="font-medium" v-text="$options.filters.price({{ $type }}.prices.applied_taxes[0].amount.value)"></div>
+        <div class="font-medium" v-text="$options.filters.price({{ $type }}.taxTotal)"></div>
     </li>
     <li v-for="discount in {{ $type }}?.prices?.discounts">
         <div>@{{ discount.label }}</div>

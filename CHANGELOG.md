@@ -1,6 +1,17 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/4.0.1...4.0.1)
+[Unreleased changes](https://github.com/rapidez/confira/compare/4.1.0...4.1.0)
+## [4.1.0](https://github.com/rapidez/confira/releases/tag/4.1.0) - 2025-09-15
+
+### Changed
+
+- Uniform Blade file naming with dashes (#48)
+- Simplify address cards (#49)
+
+### Fixed
+
+- Coupon fixes (#50)
+
 ## [4.0.1](https://github.com/rapidez/confira/releases/tag/4.0.1) - 2025-06-20
 
 ### Fixed
