@@ -117,7 +117,7 @@ jobs:
         run: sed -i "s/'login',//g" config/rapidez/frontend.php
 
       - name: Remove checkout header and footer
-        run: sed -i '/@includeWhen(request()->routeIs('\''checkout'\''), '\''rapidez::layouts.checkout.\(header\|footer\)'\'')/d' core/resources/views/layouts/app.blade.php
+        run: sed -i '/@includeWhen(request()->routeIs('\''checkout'\''), '\''rapidez::layouts.checkout.\(header\|footer\)'\'')/d' vendor/rapidez/core/resources/views/layouts/app.blade.php
 
       - name: Install Rapidez command
         run: php artisan rapidez:install --frontendonly
