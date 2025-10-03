@@ -8,7 +8,7 @@
                 @lang('Email')
             </x-slot:label>
             <x-rapidez-ct::input.animated
-                name="email-newsletter"
+                name="email"
                 type="email"
                 required
                 v-model="variables.email"
@@ -17,7 +17,7 @@
         </x-rapidez-ct::label.animated>
     </div>
     <x-rapidez::button.secondary
-        class="relative whitespace-nowrap self-end"
+        class="relative whitespace-nowrap"
         type="submit"
         v-bind:disabled="mutating && !error"
     >

@@ -4,6 +4,8 @@
     :variables="{
         cart_id: mask,
         method: cart.shipping_addresses[0]?.selected_shipping_method?.carrier_code+'/'+cart.shipping_addresses[0]?.selected_shipping_method?.method_code,
+        carrier_code: cart.shipping_addresses[0]?.selected_shipping_method?.carrier_code,
+        method_code: cart.shipping_addresses[0]?.selected_shipping_method?.method_code
     }"
     group="shipping"
     :callback="updateCart"
@@ -24,8 +26,8 @@
                 v-model="variables.method"
                 v-bind:value="method.carrier_code+'/'+method.method_code"
                 v-bind:disabled="!method.available"
-                v-bind:dusk="'shipping-method-'+index"
                 v-on:change="mutate"
+                data-testid="shipping-method"
                 class="!py-4"
                 required
             >

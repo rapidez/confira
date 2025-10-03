@@ -10,7 +10,11 @@
                     :error-callback="checkResponseForExpiredCart"
                     v-slot="{ mutate }"
                 >
-                    <form v-on:submit.prevent="mutate" class="text-muted mt-1 flex items-center gap-x-2">
+                    <form
+                        v-on:submit.prevent="mutate"
+                        class="text-muted mt-1 flex items-center gap-x-2"
+                        data-testid="remove-coupon"
+                    >
                         <button type="submit">
                             <x-heroicon-s-x-mark class="size-4 text-black-400"/>
                         </button>

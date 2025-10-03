@@ -6,7 +6,12 @@
     :error-callback="checkResponseForExpiredCart"
     v-slot="{ mutate }"
 >
-    <button v-on:click="mutate" class="mt-1 text-xs" :dusk="'item-delete-' + index" title="{{ __('Remove') }}">
+    <button
+        v-on:click="mutate"
+        class="mt-1 text-xs"
+        title="{{ __('Remove') }}"
+        data-testid="cart-item-remove"
+    >
         <x-heroicon-o-trash class="text-muted w-5"/>
     </button>
 </graphql-mutation>

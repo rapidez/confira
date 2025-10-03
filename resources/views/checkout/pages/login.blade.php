@@ -11,7 +11,7 @@
                 <x-slot:header>
                     @include('rapidez-ct::checkout.partials.header', ['href' => route('cart')])
                 </x-slot:header>
-                
+
                 <x-rapidez-ct::title-progress-bar :$checkoutSteps :$currentStep :$currentStepKey>
                     @lang('Credentials')
                 </x-rapidez-ct::title-progress-bar>
@@ -33,7 +33,7 @@
                             @lang('Back to cart')
                         </x-rapidez::button.outline>
 
-                        <x-rapidez::button.conversion loader type="submit" dusk="continue" >
+                        <x-rapidez::button.conversion loader type="submit" data-testid="continue">
                             @lang('Next')
                         </x-rapidez::button.conversion>
                     </x-rapidez-ct::toolbar>

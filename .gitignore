@@ -1,3 +1,12 @@
-/composer.lock
-/node_modules
 /vendor
+/composer.lock
+/yarn.lock
+
+# Playwright
+.env
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/tests/playwright/**/*-darwin.png

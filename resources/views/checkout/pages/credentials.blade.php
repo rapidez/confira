@@ -31,7 +31,7 @@
                             @lang('Back to cart')
                         </x-rapidez::button.outline>
 
-                        <x-rapidez::button.conversion loader>
+                        <x-rapidez::button.conversion data-testid="continue" loader>
                             @lang('Next')
                         </x-rapidez::button.conversion>
                     </x-rapidez-ct::toolbar>
