@@ -1,10 +1,11 @@
 @props(['type' => 'shipping', 'address' => 'variables', 'countryKey' => 'country_code', 'region' => 'region_id', 'showList' => false])
+@php($prefix = $type ? $type.'_' : '')
 
 <div class="grid gap-4 sm:gap-5 grid-cols-6">
     @if ($showList)
-        <div class="col-span-full" v-if="$root.loggedIn">
-            <graphql query="{ customer { addresses { id firstname lastname street city postcode country_code } } }">
-                <div v-if="data" slot-scope="{ data }">
+        <div class="col-span-full" v-if="window.app.config.globalProperties.loggedIn.value">
+            <graphql query="{ customer { addresses { id firstname lastname street city postcode country_code } } }" v-slot="{ data }">
+                <div v-if="data">
                     <x-rapidez-ct::input.select v-model="variables.customer_address_id">
                         <option v-for="address in data.customer.addresses" :value="address.id">
                             @{{ address.firstname }} @{{ address.lastname }}
@@ -20,7 +21,7 @@
         </div>
     @endif
 
-    <div class="contents" v-if="!$root.loggedIn || !variables.customer_address_id">
+    <div class="contents" v-if="!window.app.config.globalProperties.loggedIn.value || !variables.customer_address_id">
         <x-rapidez-ct::label.animated
             @class([
                 'sm:col-span-2 col-span-3' => Rapidez::config('customer/address/middlename_show', 0),
@@ -113,7 +114,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_postcode"
                 v-model.lazy="{{ $address }}.postcode"
-                v-on:change="window.app.$emit('postcode-change', {{ $address }})"
+                v-on:change="window.$emit('rapidez:postcode-change', {{ $address }})"
                 required
                 placeholder
             />
@@ -128,7 +129,7 @@
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_housenumber"
                     v-model.lazy="{{ $address }}.street[1]"
-                    v-on:change="window.app.$emit('postcode-change', {{ $address }})"
+                    v-on:change="window.$emit('rapidez:postcode-change', {{ $address }})"
                     type="{{ Rapidez::config('customer/address/street_lines', 3) == 3 ? 'number' : 'text' }}"
                     required
                     placeholder
@@ -173,33 +174,53 @@
             />
         </x-rapidez-ct::label.animated>
 
-        @if (Rapidez::config('customer/address/company_show', 0) || Rapidez::config('customer/address/taxvat_show', 0))
-            @if (Rapidez::config('customer/address/company_show', 0))
-                <x-rapidez-ct::label.animated class="col-span-3">
-                    <x-slot:label>
-                        @lang('Company')
-                    </x-slot:label>
-                    <x-rapidez-ct::input.animated
-                        name="{{ $type }}_company"
-                        v-model.lazy="{{ $address }}.company"
-                        placeholder
-                    />
-                </x-rapidez-ct::label.animated>
-            @endif
+        @if ((Rapidez::config('customer/address/company_show')) || (Rapidez::config('customer/address/taxvat_show')))
+            <div class="col-span-full">
+                <div class="font-bold mb-2">@lang('Order type')</div>
+                <x-rapidez::input.radio.base id="private-{{ $type }}" type="radio" name="order-type-{{ $type }}" class="peer/private hidden" v-bind:checked="!variables.company" />
+                <x-rapidez::button.toggle for="private-{{ $type }}" class="peer-checked/private:ring-1 peer-checked/private:ring-primary peer-checked/private:bg-primary/10 peer-checked/private:border-primary">
+                    <x-rapidez::label class="mb-0 inline">
+                        @lang('Private')
+                    </x-rapidez::label>
+                </x-rapidez::button.toggle>
 
-            @if(Rapidez::config('customer/address/taxvat_show', 0))
-                <x-rapidez-ct::label.animated class="col-span-3">
-                    <x-slot:label>
-                        @lang('Tax ID')
-                    </x-slot:label>
-                    <x-rapidez-ct::input.animated
-                        name="{{ $type }}_vat_id"
-                        v-model.lazy="{{ $address }}.vat_id"
-                        :required="Rapidez::config('customer/address/taxvat_show', 0) == 'req'"
-                        placeholder
-                    />
-                </x-rapidez-ct::label.animated>
-            @endif
+                <x-rapidez::input.radio.base id="business-{{ $type }}" type="radio" name="order-type-{{ $type }}" class="peer/business hidden" v-bind:checked="variables.company" />
+                <x-rapidez::button.toggle for="business-{{ $type }}" class="peer-checked/business:ring-1 peer-checked/business:ring-primary peer-checked/business:bg-primary/10 peer-checked/business:border-primary">
+                    <x-rapidez::label class="mb-0 inline">
+                        @lang('Business')
+                    </x-rapidez::label>
+                </x-rapidez::button.toggle>
+
+                <div class="grid p-1.5 -mx-1.5 col-span-12 grid-cols-12 gap-5 mt-3 transition-all duration-300 ease-in-out overflow-hidden opacity-100 h-auto peer-checked/private:opacity-0 peer-checked/private:h-0 peer-checked/private:invisible">
+                    @if (Rapidez::config('customer/address/company_show'))
+                        <div class="col-span-12 sm:col-span-6">
+                            <x-rapidez-ct::label.animated>
+                                <x-slot:label>@lang('Company')</x-slot:label>
+                                <x-rapidez-ct::input.animated
+                                    name="{{ $prefix }}company"
+                                    v-model="variables.company"
+                                    :required="Rapidez::config('customer/address/company_show') == 'req'"
+                                    placeholder
+                                />
+                            </x-rapidez-ct::label.animated>
+                        </div>
+                    @endif
+                    @if (Rapidez::config('customer/address/taxvat_show'))
+                        <div class="col-span-12 sm:col-span-6">
+                            <x-rapidez-ct::label.animated>
+                                <x-slot:label>@lang('Tax ID')</x-slot:label>
+                                <x-rapidez-ct::input.animated
+                                    name="{{ $prefix }}vat_id"
+                                    v-model="variables.vat_id"
+                                    v-on:change="window.$emit('rapidez:vat-change', $event)"
+                                    :required="Rapidez::config('customer/address/taxvat_show') == 'req'"
+                                    placeholder
+                                />
+                            </x-rapidez-ct::label.animated>
+                        </div>
+                    @endif
+                </div>
+            </div>
         @endif
     </div>
 </div>

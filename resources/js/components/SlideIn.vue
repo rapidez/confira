@@ -14,14 +14,14 @@
         },
 
         render() {
-            return this.$scopedSlots.default(this)
+            return this.$slots && this.$slots.default ? this.$slots.default(this) : null
         },
 
         data() {
             return {
                 target: null,
                 left: '0',
-                top: '',
+                top: '0',
                 isSwiping: false,
                 distanceX: 0,
                 distanceY: 0,
@@ -30,9 +30,10 @@
         },
 
         mounted() {
-            const refs = this.$scopedSlots.default()[0].context.$refs
-            this.target = refs.target // Add a reference to the target element
-
+            const root = this.$el && this.$el.nextElementSibling ? this.$el.nextElementSibling : null
+            if (root) {
+                this.target = root.querySelector('[data-slide-target]')
+            }
             const { distanceX, distanceY, isSwiping } = usePointerSwipe(this.target, {
                 onSwipe: this.onSwipe,
                 onSwipeEnd: this.onSwipeEnd

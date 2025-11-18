@@ -18,7 +18,7 @@
     <x-rapidez::button for="slide-in" class="gap-x-2.5 lg:hidden cursor-pointer">
         <span class="relative">
             <span class="absolute flex items-center font-bold justify-center size-4 -right-2 -top-1.5 rounded-full bg-primary text-white text-xs">
-                @{{ Math.round(cart.total_quantity) }}
+                @{{ Math.round(cart.value.total_quantity) }}
             </span>
             <x-heroicon-o-shopping-cart class="size-6"/>
         </span>
