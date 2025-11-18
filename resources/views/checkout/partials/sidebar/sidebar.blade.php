@@ -4,7 +4,9 @@
 
 @include('rapidez-ct::checkout.partials.sidebar.products')
 
-<x-rapidez-ct::summary />
+<x-rapidez-ct::separated-listing tag="dl">
+    @include('rapidez-ct::checkout.partials.sidebar.totals')
+</x-rapidez-ct::separated-listing>
 
 @include('rapidez-ct::cart.partials.sidebar.payment')
 @include('rapidez-ct::cart.partials.sidebar.usps')

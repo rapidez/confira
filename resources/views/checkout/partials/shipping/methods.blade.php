@@ -2,10 +2,10 @@
 <graphql-mutation
     :query="config.queries.setShippingMethodsOnCart"
     :variables="{
-        cart_id: mask,
-        method: cart.shipping_addresses[0]?.selected_shipping_method?.carrier_code+'/'+cart.shipping_addresses[0]?.selected_shipping_method?.method_code,
-        carrier_code: cart.shipping_addresses[0]?.selected_shipping_method?.carrier_code,
-        method_code: cart.shipping_addresses[0]?.selected_shipping_method?.method_code
+        cart_id: mask.value,
+        method: cart.value.shipping_addresses[0]?.selected_shipping_method?.carrier_code+'/'+cart.value.shipping_addresses[0]?.selected_shipping_method?.method_code,
+        carrier_code: cart.value.shipping_addresses[0]?.selected_shipping_method?.carrier_code,
+        method_code: cart.value.shipping_addresses[0]?.selected_shipping_method?.method_code
     }"
     group="shipping"
     :callback="updateCart"
@@ -17,10 +17,10 @@
     }"
     mutate-event="setShippingMethodsOnCart"
     v-slot="{ mutate, variables }"
-    v-if="!cart.is_virtual"
+    v-if="!cart.value.is_virtual"
 >
-    <fieldset class="flex flex-col gap-3" partial-submit="mutate" v-on:change="window.app.$emit('setShippingAddressesOnCart')">
-        <div v-for="(method, index) in cart.shipping_addresses[0]?.available_shipping_methods">
+    <fieldset class="flex flex-col gap-3" partial-submit v-on:partial-submit="async () => await mutate()" v-on:change="window.$emit('rapidez:setShippingAddressesOnCart')">
+        <div v-for="(method, index) in cart.value.shipping_addresses[0]?.available_shipping_methods">
             <x-rapidez-ct::input.radio.tile
                 name="shipping_method"
                 v-model="variables.method"
@@ -34,7 +34,7 @@
                 <div class="flex flex-col md:w-3/5">
                     <span class="font-medium text-sm">@{{ method.carrier_title }}</span>
                     <div class="text-muted text-xs flex gap-1">
-                        <span v-if="method.amount.value > 0" class="text-muted">@{{ method.amount.value | price }}</span>
+                        <span v-if="method.amount.value > 0" class="text-muted">@{{ window.price(method.amount.value) }}</span>
                         <span v-else class="text-primary">@lang('Free')</span>
                         <span>-</span>
                         <span>@{{ method.method_title }}</span>

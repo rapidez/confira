@@ -15,7 +15,7 @@
     </li>
     <li v-for="discount in {{ $type }}?.prices?.discounts">
         <div>@{{ discount.label }}</div>
-        <div class="text-green-700 font-semibold">@{{ discount.amount.value | price }}</div>
+        <div class="text-green-700 font-semibold">@{{ window.price(discount.amount.value) }}</div>
     </li>
     <li v-if="{{ $type }}?.shipping_method || {{ $type }}?.shipping_addresses?.[0]?.selected_shipping_method?.amount">
         <div>@lang('Shipping')</div>

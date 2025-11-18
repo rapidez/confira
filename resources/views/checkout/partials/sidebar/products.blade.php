@@ -1,6 +1,6 @@
-<toggler>
-    <div slot-scope="{ toggle, isOpen }" class="*:pt-2.5 first:*:pt-0 mb-2.5 flex w-full flex-col gap-2.5 divide-y divide-dashed border-b border-dashed pb-2.5">
-        <div v-for="(item, index) in cart.items" v-show="isOpen || index < 2" class="flex gap-3">
+<toggler v-slot="{ toggle, isOpen }">
+    <div class="*:pt-2.5 first:*:pt-0 mb-2.5 flex w-full flex-col gap-2.5 divide-y divide-dashed border-b border-dashed pb-2.5">
+        <div v-for="(item, index) in cart.value.items" v-show="isOpen || index < 2" class="flex gap-3">
             <div class="bg-primary/10">
                 <img
                     v-if="item.configured_variant?.image"
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </div>
-        <button v-if="cart.items.length > 2" class="flex items-center pb-1 gap-1 !border-t-0 !pt-0 hover:underline" @click="toggle">
+        <button v-if="cart.value.items.length > 2" class="flex items-center pb-1 gap-1 !border-t-0 !pt-0 hover:underline" @click="toggle">
             <template v-if="isOpen">
                 @lang('Show less products')
             </template>
