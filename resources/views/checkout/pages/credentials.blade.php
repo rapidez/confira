@@ -20,7 +20,7 @@
                     v-on:submit.prevent="(e) => {
                         submitPartials(e.target?.form ?? e.target)
                             .then((result) =>
-                                window.$emit('rapidez:checkout-credentials-saved')
+                                window.$emit('checkout-credentials-saved')
                                 && window.Turbo.visit(window.url('{{ route('checkout', ['step' => 'payment']) }}'))
                             ).catch();
                     }"
