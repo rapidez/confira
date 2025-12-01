@@ -1,5 +1,5 @@
 <checkout-login v-slot="checkoutLogin">
-    <fieldset partial-submit v-on:partial-submit="async () => await checkoutLogin.go()" class="grid gap-4 sm:gap-5 md:items-end md:grid-cols-2">
+    <fieldset partial-submit v-on:partial-submit="(ev) => checkoutLogin.go().then(ev.detail.resolve).catch(ev.detail.reject)" class="grid gap-4 sm:gap-5 md:items-end md:grid-cols-2">
         <x-rapidez-ct::label.animated class="col-span-full">
             <x-slot:label>
                 @lang('Email')
