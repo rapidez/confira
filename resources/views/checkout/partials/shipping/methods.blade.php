@@ -19,7 +19,7 @@
     v-slot="{ mutate, variables }"
     v-if="!cart.value.is_virtual"
 >
-    <fieldset class="flex flex-col gap-3" partial-submit v-on:partial-submit="(ev) => mutate().then(ev.detail.resolve).catch(ev.detail.reject)" v-on:change="window.$emit('rapidez:setShippingAddressesOnCart')">
+    <fieldset class="flex flex-col gap-3" partial-submit v-on:partial-submit="(ev) => mutate().then(ev.detail.resolve).catch(ev.detail.reject)" v-on:change="window.$emit('setShippingAddressesOnCart')">
         <div v-for="(method, index) in cart.value.shipping_addresses[0]?.available_shipping_methods">
             <x-rapidez-ct::input.radio.tile
                 name="shipping_method"

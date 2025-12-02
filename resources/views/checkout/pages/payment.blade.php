@@ -21,7 +21,7 @@
                     v-on:submit.prevent="(e) => {
                         submitPartials(e.target?.form ?? e.target)
                             .then((result) =>
-                                window.$emit('rapidez:checkout-payment-saved')
+                                window.$emit('checkout-payment-saved')
                                 && window.$emit('placeOrder')
                             ).catch();
                     }"

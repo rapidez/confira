@@ -114,7 +114,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_postcode"
                 v-model.lazy="{{ $address }}.postcode"
-                v-on:change="window.$emit('rapidez:postcode-change', {{ $address }})"
+                v-on:change="window.$emit('postcode-change', {{ $address }})"
                 required
                 placeholder
             />
@@ -129,7 +129,7 @@
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_housenumber"
                     v-model.lazy="{{ $address }}.street[1]"
-                    v-on:change="window.$emit('rapidez:postcode-change', {{ $address }})"
+                    v-on:change="window.$emit('postcode-change', {{ $address }})"
                     type="{{ Rapidez::config('customer/address/street_lines', 3) == 3 ? 'number' : 'text' }}"
                     required
                     placeholder
@@ -212,7 +212,7 @@
                                 <x-rapidez-ct::input.animated
                                     name="{{ $prefix }}vat_id"
                                     v-model="variables.vat_id"
-                                    v-on:change="window.$emit('rapidez:vat-change', $event)"
+                                    v-on:change="window.$emit('vat-change', $event)"
                                     :required="Rapidez::config('customer/address/taxvat_show') == 'req'"
                                     placeholder
                                 />
