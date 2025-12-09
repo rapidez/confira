@@ -29,7 +29,7 @@
             ])
         >
             <x-slot:label>
-                @lang('Firstname')
+                @lang('First name')
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_firstname"
