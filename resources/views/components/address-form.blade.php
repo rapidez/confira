@@ -29,7 +29,7 @@
             ])
         >
             <x-slot:label>
-                @lang('Firstname')
+                @lang('First name')
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_firstname"
@@ -42,7 +42,7 @@
         @if (Rapidez::config('customer/address/middlename_show', 0))
             <x-rapidez-ct::label.animated class="col-span-3 sm:col-span-2">
                 <x-slot:label>
-                    @lang('Middlename')
+                    @lang('Middle name')
                 </x-slot:label>
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_middlename"
@@ -60,7 +60,7 @@
             ])
         >
             <x-slot:label>
-                @lang('Lastname')
+                @lang('Last name')
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_lastname"
@@ -124,7 +124,7 @@
         @if (Rapidez::config('customer/address/street_lines', 3) >= 2)
             <x-rapidez-ct::label.animated class="col-span-3 sm:col-span-2">
                 <x-slot:label>
-                    @lang('Housenumber')
+                    @lang('House number')
                 </x-slot:label>
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_housenumber"
