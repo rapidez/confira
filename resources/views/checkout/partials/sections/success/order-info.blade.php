@@ -1,6 +1,6 @@
 <div class="flex flex-col *:gap-x-4">
-    <checkout-success-addresses :order="order">
-        <div slot-scope="{ hideBilling, shipping, billing }" class="flex flex-1 border-t border-dashed justify-between pt-5">
+    <checkout-success-addresses :order="order" v-slot="{ hideBilling, shipping, billing }">
+        <div class="flex flex-1 border-t border-dashed justify-between pt-5">
             <template v-if="hideBilling">
                 <x-rapidez-ct::card.address-alt v-bind:address="shipping" shipping billing />
             </template>

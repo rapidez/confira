@@ -1,6 +1,6 @@
 @php($checkoutSteps = config('rapidez.frontend.checkout_steps.' . config('rapidez.store_code')) ?: config('rapidez.frontend.checkout_steps.default'))
-<checkout-success>
-    <div slot-scope="{ order, refreshOrder, hideBilling, shipping, billing, items }" class="container" data-testid="checkout-success">
+<checkout-success v-slot="{ order, refreshOrder, hideBilling, shipping, billing, items }">
+    <div class="container" data-testid="checkout-success">
         <x-rapidez-ct::layout class="mt-4 sm:mt-12">
             <x-rapidez-ct::title tag="h1">
                 @lang('Thank you for your order')
@@ -14,19 +14,16 @@
 
             <x-rapidez-ct::sections>
                 @include('rapidez-ct::checkout.partials.sections.success.products')
-
                 @if (Rapidez::config('newsletter/general/active', 1))
                     <x-rapidez-ct::card.inactive>
                         @include('rapidez-ct::checkout.partials.sections.success.newsletter')
                     </x-rapidez-ct::card.inactive>
                 @endif
-
                 @if (config('rapidez.checkout-theme.checkout.success.register'))
                     <x-rapidez-ct::card.inactive>
                         @include('rapidez-ct::checkout.partials.sections.success.create-account')
                     </x-rapidez-ct::card.inactive>
                 @endif
-
             </x-rapidez-ct::sections>
             <x-slot:sidebar class="max-lg:border-t max-lg:border-dashed max-lg:mt-1 max-lg:pt-6">
                 @include('rapidez-ct::checkout.partials.sidebar.success-sidebar')

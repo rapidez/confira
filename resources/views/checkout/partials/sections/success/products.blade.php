@@ -3,15 +3,20 @@
     <ul class="flex flex-col divide-y divide-dashed first:*:pt-0 last:*:pb-0">
         <li v-for="(item, productId, index) in order.items" class="flex py-5">
             <div class="flex w-full flex-wrap gap-y-3 gap-x-3 text-sm md:gap-x-6 lg:items-start">
-                <div class="flex h-24 items-center justify-center">
+                <div class="flex size-24 items-center justify-center">
                     <img
-                        class="max-h-24"
-                        :alt="item.product_name"
-                        :src="`/storage/{{ config('rapidez.store') }}/resizes/200/sku/${item.product_sku}`"
-                        height="100"
-                        v-if="item.product_sku"
-                    >
-                    <x-rapidez::no-image v-else class="size-24"/>
+                        v-if="item.configured_variant?.image"
+                        class="object-contain"
+                        :alt="item.product.name"
+                        :src="resizedPath(item.configured_variant?.image.url + '.webp', '200')"
+                    />
+                    <img
+                        v-else-if="item.product.image"
+                        class="object-contain"
+                        :alt="item.product.name"
+                        :src="resizedPath(item.product.image.url + '.webp', '200')"
+                    />
+                    <x-rapidez::no-image v-else="" class="size-24"/>
                 </div>
                 <div class="flex flex-1 flex-wrap justify-between gap-x-6 items-start">
                     <div class="flex-1">
