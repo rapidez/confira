@@ -1,6 +1,16 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/4.2.0...4.2.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.0-alpha.1...5.0.0-alpha.1)
+## [5.0.0-alpha.1](https://github.com/rapidez/confira/releases/tag/5.0.0-alpha.1) - 2025-12-11
+
+### Added
+
+- Rapidez v5 support (#59)
+
+### Fixed
+
+- Fix future Playwright tests (#62)
+
 ## [4.2.0](https://github.com/rapidez/confira/releases/tag/4.2.0) - 2025-11-27
 
 ### Added
