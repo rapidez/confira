@@ -1,6 +1,28 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/4.1.0...4.1.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/4.2.1...4.2.1)
+## [4.2.1](https://github.com/rapidez/confira/releases/tag/4.2.1) - 2025-12-11
+
+### Fixed
+
+- Fix Playwright tests (#64)
+
+## [4.2.0](https://github.com/rapidez/confira/releases/tag/4.2.0) - 2025-11-27
+
+### Added
+
+- Playwright test + fixes (#55)
+
+### Fixed
+
+- Progressbar margin fix (#52)
+- Use taxTotal because that actually exists as opposed to tax (#53)
+- Added group on wrapping div for animated label (#54)
+- Playwright publish payment icons (#56)
+- Consistent tests fix (#57)
+- Fixed broken success page (#58)
+- Shipping address fallbacks (#60)
+
 ## [4.1.0](https://github.com/rapidez/confira/releases/tag/4.1.0) - 2025-09-15
 
 ### Changed
