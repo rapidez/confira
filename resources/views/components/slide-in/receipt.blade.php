@@ -5,7 +5,7 @@
     <x-rapidez-ct::title class="mb-4">
         @lang('Overview')
     </x-rapidez-ct::title>
-    <x-rapidez-ct::separated-listing tag="dl">
+    <x-rapidez-ct::separated-listing tag="dl" v-if="cart?.value?.prices">
         <div>
             <dt>@lang('Subtotal')</dt>
             <dd v-if="showTax">@{{ window.price(cart.value.prices.subtotal_including_tax.value) }}</dd>
