@@ -38,7 +38,7 @@
             <dd>-@{{ window.price(discount.amount.value) }}</dd>
         </div>
     </template>
-    <div class="font-medium">
+    <div class="font-bold">
         <dt>@lang('Total')</dt>
         <dd v-if="showTax">@{{ window.price(cart.value.prices.grand_total.value) }}</dd>
         <dd v-else>@{{ window.price(cart.value.prices.grand_total.value - cart.value.taxTotal) }}</dd>
