@@ -1,4 +1,4 @@
-<div class="flex shrink-0 h-28 w-28 !p-0">
+<div class="flex shrink-0 size-20 !p-0 sm:size-28">
     <img
         v-if="item.configured_variant?.image"
         class="object-contain"
