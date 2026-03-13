@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="overflow-clip">
-        <div class="lg:container xl:max-w-screen-xl">
+        <div class="lg:container xl:max-w-(--breakpoint-xl)">
             <x-rapidez-ct::layout.checkout>
                 <x-slot:header>
                     @include('rapidez-ct::checkout.partials.header', ['href' => route('cart')])

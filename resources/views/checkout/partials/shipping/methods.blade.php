@@ -28,7 +28,7 @@
                 v-bind:disabled="!method.available"
                 v-on:change="mutate"
                 data-testid="shipping-method"
-                class="!py-4"
+                class="py-4!"
                 required
             >
                 <div class="flex flex-col md:w-3/5">

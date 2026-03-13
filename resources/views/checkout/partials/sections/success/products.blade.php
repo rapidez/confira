@@ -1,6 +1,6 @@
-<div class="!pt-0">
+<div class="pt-0!">
     <p class="text-base font-medium text-muted mb-4">@lang('You ordered this'):</p>
-    <ul class="flex flex-col divide-y divide-dashed first:*:pt-0 last:*:pb-0">
+    <ul class="flex flex-col divide-y divide-dashed *:first:pt-0 *:last:pb-0">
         <li v-for="(item, productId, index) in order.items" class="flex py-5">
             <div class="flex w-full flex-wrap gap-y-3 gap-x-3 text-sm md:gap-x-6 lg:items-start">
                 <div class="flex size-24 items-center justify-center">
