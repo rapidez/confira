@@ -1,4 +1,4 @@
-<x-rapidez-ct::title.xl class="max-lg:hidden -mb-1.5">
+<x-rapidez-ct::title.xl class="max-lg:hidden">
     @lang('Overview')
 </x-rapidez-ct::title.xl>
 
