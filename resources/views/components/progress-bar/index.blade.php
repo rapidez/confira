@@ -10,7 +10,7 @@
         <a
             href="{{ route('checkout', $checkoutStep) }}"
             @class([
-                'bg-primary aspect-square w-3 rounded-sm',
+                'bg-primary aspect-square w-3 rounded-xs',
                 'bg-emphasis! pointer-events-none' => $currentStepKey < $checkoutStepKey,
                 'outline-4 outline-solid outline-primary/20' => $checkoutStepKey === $currentStepKey
             ])
