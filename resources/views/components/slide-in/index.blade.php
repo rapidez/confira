@@ -3,7 +3,7 @@
         <input v-model="slideIn.isOpen" id="slide-in" type="checkbox" class="hidden peer prevent-scroll" />
         <div
             data-slide-target
-            class="!touch-none absolute top-1.5 inset-x-0 bg-white z-30 rounded-b-xl opacity-0 -translate-y-full peer-checked:opacity-100 peer-checked:translate-y-0"
+            class="touch-none! absolute top-1.5 inset-x-0 bg-white z-30 rounded-b-xl opacity-0 -translate-y-full peer-checked:opacity-100 peer-checked:translate-y-0"
             v-bind:class="{ 'transition-all duration-500': !slideIn.isSwiping }"
             v-bind:style="{ top: slideIn.top }"
         >
