@@ -15,7 +15,7 @@
             />
         </x-rapidez-ct::label.animated>
     </fieldset>
-    <p v-if="checkoutLogin.isEmailAvailable" class="self-end text-muted">
+    <p v-if="checkoutLogin.isEmailAvailable" class="self-end text-muted pb-6">
         @lang('We will only use your information to communicate with you about your order.')
     </p>
 </checkout-login>

@@ -1,4 +1,4 @@
-<x-rapidez-ct::sections class="!mt-0">
+<x-rapidez-ct::sections class="mt-0!">
     @include('rapidez-ct::cart.partials.products')
 </x-rapidez-ct::sections>
 

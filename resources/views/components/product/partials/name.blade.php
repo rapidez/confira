@@ -2,7 +2,7 @@
     <a class="hover:underline" :href="window.url(item.product.url_key + item.product.url_suffix)">
         <div class="font-semibold text-sm">@{{ item.product.name }}</div>
     </a>
-    <div class="flex flex-wrap *:border-r last:*:border-r-0 -mx-2 *:px-2 text-muted text-xs subpixel-antialiased mt-2 *:mb-2 *:leading-3">
+    <div class="flex flex-wrap *:border-r *:last:border-r-0 -mx-2 *:px-2 text-muted text-xs subpixel-antialiased mt-2 *:mb-2 *:leading-3">
         <div v-for="option in item.configurable_options">
                 @{{ option.value_label }}
             </div>

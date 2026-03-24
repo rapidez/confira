@@ -1,4 +1,4 @@
-<x-rapidez-ct::title.xl class="max-lg:hidden -mb-1.5">
+<x-rapidez-ct::title.xl class="max-lg:hidden">
     @lang('Overview')
 </x-rapidez-ct::title.xl>
 
@@ -45,7 +45,7 @@
     </div>
 </x-rapidez-ct::separated-listing>
 
-<x-rapidez::button.conversion :href="route('checkout')" class="flex w-full items-center justify-center gap-1 !mt-0">
+<x-rapidez::button.conversion :href="route('checkout')" class="flex w-full items-center justify-center gap-1 mt-0!">
     @lang('To checkout')
 </x-rapidez::button.conversion>
 

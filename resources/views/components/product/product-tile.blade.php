@@ -1,6 +1,6 @@
 @slots(['name', 'quantity'])
 
-<div {{ $attributes->class('divide-y divide-dashed [&>:first-child]:pt-0') }}>
+<div {{ $attributes->class('divide-y divide-dashed *:first:pt-0') }}>
     <div v-for="(item, index) in cart.value.items" class="flex gap-y-5 py-5 lg:pb-4 lg:pt-5" :key="item.id" data-testid="cart-item">
         @include('rapidez-ct::components.product.partials.image')
         <div class="flex flex-wrap items-start justify-between gap-x-2 gap-y-4 w-full ml-2">

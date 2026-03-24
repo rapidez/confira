@@ -3,7 +3,7 @@
 </div>
 <div class="flex flex-wrap gap-y-3 xl:mr-20 max-xl:justify-center">
     @isset($href)
-        <x-rapidez::button.outline class="flex items-center justify-center !p-0 size-12 lg:hidden" :$href>
+        <x-rapidez::button.outline class="flex items-center justify-center p-0! size-12 lg:hidden" :$href>
             <x-heroicon-o-arrow-long-left class="size-6"/>
         </x-rapidez::button.outline>
     @endif
