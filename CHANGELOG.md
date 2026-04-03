@@ -1,6 +1,24 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.0-beta.1...5.0.0-beta.1)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.0...5.0.0)
+## [5.0.0](https://github.com/rapidez/confira/releases/tag/5.0.0) - 2026-04-03
+
+### Added
+
+- Rapidez v5 support (#59)
+
+### Changed
+
+- Tailwind 4 update (#73)
+- Playwright reports in Cloudflare R2 (#67)
+
+### Fixed
+
+- Check for cart prices (#65)
+- Styling fixes (#66)
+- Playwright update all screenshots fix (#69)
+- Fix future Playwright tests (#62)
+
 ## [5.0.0-beta.1](https://github.com/rapidez/confira/releases/tag/5.0.0-beta.1) - 2026-03-24
 
 ### Changed
