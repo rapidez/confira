@@ -114,7 +114,7 @@
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_postcode"
                 v-model.lazy="{{ $address }}.postcode"
-                v-on:change="window.$emit('postcode-change', {{ $address }})"
+                v-on:change="(event) => window.$emit('postcode-change', {{ $address }}, event)"
                 required
                 placeholder
             />
@@ -129,7 +129,7 @@
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_housenumber"
                     v-model.lazy="{{ $address }}.street[1]"
-                    v-on:change="window.$emit('postcode-change', {{ $address }})"
+                    v-on:change="(event) => window.$emit('postcode-change', {{ $address }}, event)"
                     type="{{ Rapidez::config('customer/address/street_lines', 3) == 3 ? 'number' : 'text' }}"
                     required
                     placeholder
