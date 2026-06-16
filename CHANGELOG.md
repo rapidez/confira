@@ -1,6 +1,14 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.0...5.0.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.1...5.0.1)
+## [5.0.1](https://github.com/rapidez/confira/releases/tag/5.0.1) - 2026-06-16
+
+### Fixed
+
+- Dispatch postcode-change with event (#77)
+- Add class to shipping method display in summary (#78)
+- Fix mobile container (#80)
+
 ## [5.0.0](https://github.com/rapidez/confira/releases/tag/5.0.0) - 2026-04-03
 
 ### Added
