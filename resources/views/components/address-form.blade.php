@@ -6,16 +6,21 @@
         <div class="col-span-full" v-if="window.app.config.globalProperties.loggedIn.value">
             <graphql query="{ customer { addresses { id firstname lastname street city postcode country_code } } }" v-slot="{ data }">
                 <div v-if="data">
-                    <x-rapidez-ct::input.select v-model="variables.customer_address_id">
-                        <option v-for="address in data.customer.addresses" :value="address.id">
-                            @{{ address.firstname }} @{{ address.lastname }}
-                            - @{{ address.street[0] }} @{{ address.street[1] }} @{{ address.street[2] }}
-                            - @{{ address.postcode }}
-                            - @{{ address.city }}
-                            - @{{ address.country_code }}
-                        </option>
-                        <option :value="null">@lang('New address')</option>
-                    </x-rapidez-ct::input.select>
+                    <x-rapidez-ct::label.animated class="col-span-full sm:col-span-3">
+                        <x-slot:label>
+                            @lang('Address')
+                        </x-slot:label>
+                        <x-rapidez-ct::input.select v-model="variables.customer_address_id">
+                            <option v-for="address in data.customer.addresses" :value="address.id">
+                                @{{ address.firstname }} @{{ address.lastname }}
+                                - @{{ address.street[0] }} @{{ address.street[1] }} @{{ address.street[2] }}
+                                - @{{ address.postcode }}
+                                - @{{ address.city }}
+                                - @{{ address.country_code }}
+                            </option>
+                            <option :value="null">@lang('New address')</option>
+                        </x-rapidez-ct::input.select>
+                    </x-rapidez-ct::label.animated>
                 </div>
             </graphql>
         </div>
