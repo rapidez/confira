@@ -1,6 +1,17 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.1...5.0.1)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.1.0...5.1.0)
+## [5.1.0](https://github.com/rapidez/confira/releases/tag/5.1.0) - 2026-08-05
+
+### Changed
+
+- Add label to address select (#81)
+
+### Fixed
+
+- Fix class (#82)
+- Use subtotal_incl / excl_tax (#83)
+
 ## [5.0.1](https://github.com/rapidez/confira/releases/tag/5.0.1) - 2026-06-16
 
 ### Fixed
