@@ -31,7 +31,7 @@
                             @lang('Back to cart')
                         </x-rapidez::button.outline>
 
-                        <x-rapidez::button.conversion data-testid="continue" loader v-on:mousedown.prevent="{{-- Do not remove, this prevents requiring double click for the submit action --}}">
+                        <x-rapidez::button.conversion data-testid="continue" loader v-on:mousedown.prevent="{{-- Do not remove, this prevents requiring double click for the submit action (#85) --}}">
                             @lang('Next')
                         </x-rapidez::button.conversion>
                     </x-rapidez-ct::toolbar>
