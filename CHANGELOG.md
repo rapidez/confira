@@ -1,6 +1,14 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/...master)
+[Unreleased changes](https://github.com/rapidez/confira/compare/...3.1.1)
+## [3.1.1](https://github.com/rapidez/confira/releases/tag/3.1.1) - 2026-09-10
+
+### Fixed
+
+- Coupon fixes (#51)
+
+
+
 ## [3.1.0](https://github.com/rapidez/confira/releases/tag/3.1.0) - 2025-04-17
 
 ### Added
