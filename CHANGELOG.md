@@ -1,6 +1,14 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.1.0...5.1.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.1.1...5.1.1)
+## [5.1.1](https://github.com/rapidez/confira/releases/tag/5.1.1) - 2026-09-10
+
+### Fixed
+
+- Fixed double click submit before next (#85)
+
+
+
 ## [5.1.0](https://github.com/rapidez/confira/releases/tag/5.1.0) - 2026-08-05
 
 ### Changed
