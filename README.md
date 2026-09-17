@@ -67,9 +67,9 @@ Note: It's recommended to only publish and modify the specific views you need to
 ## Browser tests
 
 - Make sure Confira is working in your browser
-- Run the tests with `yarn playwright test`
-- Alternatively, run the tests from a UI with `yarn playwright test --ui`
-- Update the screenshots with `yarn playwright test --update-snapshots`
+- Run the tests with `pnpm playwright test`
+- Alternatively, run the tests from a UI with `pnpm playwright test --ui`
+- Update the screenshots with `pnpm playwright test --update-snapshots`
 
 ## License
 
