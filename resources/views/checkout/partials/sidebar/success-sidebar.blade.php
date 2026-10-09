@@ -2,11 +2,11 @@
     @lang('Overview')
 </x-rapidez-ct::title.xl>
 
-<x-rapidez-ct::separated-listing tag="dl">
+<x-rapidez-ct::separated-listing tag="dl" v-if="order?.total">
     <div>
         <dt>@lang('Subtotal')</dt>
-        <dd v-if="showTax">@{{ window.price(order.total.subtotal.value) }}</dd>
-        <dd v-else>@{{ window.price(order.total.subtotal.value - order.total.total_tax.value) }}</dd>
+        <dd v-if="showTax">@{{ window.price(order.total.subtotal_incl_tax?.value ?? (order.total.subtotal.value + order.total.total_tax)) }}</dd>
+        <dd v-else>@{{ window.price(order.total.subtotal_excl_tax?.value ?? order.total.subtotal.value) }}</dd>
     </div>
     <template v-if="order.shipping_method">
         <div>

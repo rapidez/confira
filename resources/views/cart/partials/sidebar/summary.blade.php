@@ -11,7 +11,7 @@
     <template v-if="cart.value.shipping_addresses?.length">
         <div v-for="address in cart.value.shipping_addresses">
             <template v-if="address?.selected_shipping_method">
-                <dt>
+                <dt class="flex flex-col max-w-52">
                     @lang('Shipping')
                     <small class="text-muted">@{{ address.selected_shipping_method.carrier_title }} - @{{ address.selected_shipping_method.method_title }}</small>
                 </dt>

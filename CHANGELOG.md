@@ -1,6 +1,43 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.0.0...5.0.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.2.0...5.2.0)
+## [5.2.0](https://github.com/rapidez/confira/releases/tag/5.2.0) - 2026-10-09
+
+### Changed
+
+- Use pnpm as package manager (#86)
+
+### Fixed
+
+- Check for order totals on success page (#87)
+
+## [5.1.1](https://github.com/rapidez/confira/releases/tag/5.1.1) - 2026-09-10
+
+### Fixed
+
+- Fixed double click submit before next (#85)
+
+
+
+## [5.1.0](https://github.com/rapidez/confira/releases/tag/5.1.0) - 2026-08-05
+
+### Changed
+
+- Add label to address select (#81)
+
+### Fixed
+
+- Fix class (#82)
+- Use subtotal_incl / excl_tax (#83)
+
+## [5.0.1](https://github.com/rapidez/confira/releases/tag/5.0.1) - 2026-06-16
+
+### Fixed
+
+- Dispatch postcode-change with event (#77)
+- Add class to shipping method display in summary (#78)
+- Fix mobile container (#80)
+
 ## [5.0.0](https://github.com/rapidez/confira/releases/tag/5.0.0) - 2026-04-03
 
 ### Added

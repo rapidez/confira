@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="overflow-clip">
-        <div class="lg:container xl:max-w-7xl">
+        <div class="container xl:max-w-7xl">
             <x-rapidez-ct::layout.checkout>
                 <x-slot:header>
                     @include('rapidez-ct::checkout.partials.header', ['href' => route('cart')])
@@ -40,7 +40,7 @@
                             redirect="{{ route('checkout.success') }}"
                             v-slot="{ mutate, variables }"
                         >
-                            <x-rapidez::button.conversion class="relative" type="submit" data-testid="continue" loader>
+                            <x-rapidez::button.conversion class="relative" type="submit" data-testid="continue" loader v-on:mousedown.prevent="{{-- Do not remove, this prevents requiring double click for the submit action (#85) --}}">
                                 @lang('Place order')
                             </x-rapidez::button.conversion>
                         </graphql-mutation>

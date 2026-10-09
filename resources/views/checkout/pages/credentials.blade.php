@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="overflow-clip">
-        <div class="lg:container xl:max-w-7xl">
+        <div class="container xl:max-w-7xl">
             <x-rapidez-ct::layout.checkout>
                 <x-slot:header>
                     @include('rapidez-ct::checkout.partials.header', ['href' => route('cart')])
@@ -31,7 +31,7 @@
                             @lang('Back to cart')
                         </x-rapidez::button.outline>
 
-                        <x-rapidez::button.conversion data-testid="continue" loader>
+                        <x-rapidez::button.conversion data-testid="continue" loader v-on:mousedown.prevent="{{-- Do not remove, this prevents requiring double click for the submit action (#85) --}}">
                             @lang('Next')
                         </x-rapidez::button.conversion>
                     </x-rapidez-ct::toolbar>
