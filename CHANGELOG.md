@@ -1,6 +1,12 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.2.0...5.2.0)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.2.1...5.2.1)
+## [5.2.1](https://github.com/rapidez/confira/releases/tag/5.2.1) - 2026-10-09
+
+### Fixed
+
+- Fix animated input ring style (#79)
+
 ## [5.2.0](https://github.com/rapidez/confira/releases/tag/5.2.0) - 2026-10-09
 
 ### Changed
