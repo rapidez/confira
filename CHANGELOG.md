@@ -1,6 +1,16 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.1.1...5.1.1)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.2.0...5.2.0)
+## [5.2.0](https://github.com/rapidez/confira/releases/tag/5.2.0) - 2026-10-09
+
+### Changed
+
+- Use pnpm as package manager (#86)
+
+### Fixed
+
+- Check for order totals on success page (#87)
+
 ## [5.1.1](https://github.com/rapidez/confira/releases/tag/5.1.1) - 2026-09-10
 
 ### Fixed
