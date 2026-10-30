@@ -13,4 +13,5 @@
             @{{ window.attributeLabel(option) }}: <span v-html="item.product.attribute_values[option]?.join(', ')"></span>
         </div>
     </div>
+    @include('rapidez-ct::cart.partials.product.alert')
 </div>
