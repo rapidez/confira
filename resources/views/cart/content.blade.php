@@ -1,6 +1,7 @@
 @include('rapidez-ct::cart.partials.cart-title')
 
 <x-rapidez-ct::layout>
+    @include('rapidez-ct::cart.partials.alert')
     @include('rapidez-ct::cart.cart')
 
     <x-slot:sidebar>
