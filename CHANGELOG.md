@@ -1,6 +1,14 @@
 # Changelog 
 
-[Unreleased changes](https://github.com/rapidez/confira/compare/5.2.1...5.2.1)
+[Unreleased changes](https://github.com/rapidez/confira/compare/5.3.0...5.3.0)
+## [5.3.0](https://github.com/rapidez/confira/releases/tag/5.3.0) - 2026-11-05
+
+### Added
+
+- Show an error per item in the cart (#89)
+
+
+
 ## [5.2.1](https://github.com/rapidez/confira/releases/tag/5.2.1) - 2026-10-09
 
 ### Fixed
