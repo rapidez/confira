@@ -6,6 +6,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="email"
+                autocomplete="email"
                 type="email"
                 required
                 v-model="variables.email"

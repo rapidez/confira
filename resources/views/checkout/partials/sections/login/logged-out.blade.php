@@ -6,6 +6,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="email"
+                autocomplete="username"
                 type="email"
                 v-model.lazy="checkoutLogin.email"
                 v-bind:disabled="window.app.config.globalProperties.loggedIn.value"
