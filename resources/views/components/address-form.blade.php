@@ -38,6 +38,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_firstname"
+                autocomplete="given-name"
                 v-model.lazy="{{ $address }}.firstname"
                 required
                 placeholder
@@ -51,6 +52,7 @@
                 </x-slot:label>
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_middlename"
+                    autocomplete="additional-name"
                     v-model.lazy="{{ $address }}.middlename"
                     placeholder
                 />
@@ -69,6 +71,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_lastname"
+                autocomplete="family-name"
                 v-model.lazy="{{ $address }}.lastname"
                 required
                 placeholder
@@ -82,6 +85,7 @@
                 </x-slot:label>
                 <x-rapidez-ct::input.animated
                     name="{{ $type }}_telephone"
+                    autocomplete="tel"
                     v-model.lazy="{{ $address }}.telephone"
                     placeholder
                     :required="Rapidez::config('customer/address/telephone_show', 'req') == 'req'"
@@ -98,6 +102,7 @@
                 required
                 placeholder
                 name="{{ $type }}_country"
+                autocomplete="country"
             />
         </x-rapidez-ct::label.animated>
         <x-rapidez-ct::label.animated class="col-span-full sm:col-span-3 has-[.exists]:block hidden">
@@ -107,6 +112,7 @@
             <x-rapidez::input.select.region
                 class="exists"
                 name="{{ $type }}_region"
+                autocomplete="address-level1"
                 v-model="{{ $address }}.{{ $region }}"
                 country="{{ $address }}.{{ $countryKey }}"
             />
@@ -118,6 +124,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_postcode"
+                autocomplete="postal-code"
                 v-model.lazy="{{ $address }}.postcode"
                 v-on:change="(event) => window.$emit('postcode-change', {{ $address }}, event)"
                 required
@@ -173,6 +180,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="{{ $type }}_city"
+                autocomplete="address-level2"
                 v-model.lazy="{{ $address }}.city"
                 required
                 placeholder
@@ -203,6 +211,7 @@
                                 <x-slot:label>@lang('Company')</x-slot:label>
                                 <x-rapidez-ct::input.animated
                                     name="{{ $prefix }}company"
+                                    autocomplete="organization"
                                     v-model="variables.company"
                                     :required="Rapidez::config('customer/address/company_show') == 'req'"
                                     placeholder

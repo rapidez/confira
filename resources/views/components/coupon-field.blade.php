@@ -14,6 +14,7 @@
             </x-slot:label>
             <x-rapidez-ct::input.animated
                 name="couponCode"
+                autocomplete="off"
                 placeholder
                 v-model="variables.coupon_code"
                 v-bind:disabled="running"
