@@ -8,6 +8,7 @@
                 name="email"
                 type="email"
                 v-model="checkoutLogin.email"
+                v-on:change="() => checkoutLogin.go()"
                 v-bind:disabled="loggedIn"
                 class="justify-center"
                 required
